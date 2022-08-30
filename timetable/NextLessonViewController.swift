@@ -18,7 +18,7 @@ class NextLessonViewController: UIViewController {
         
     }
     func nextLesson() -> String{
-        let timetable = allTimetableStruct()
+        let timetable = AllTimetableStruct()
         let date = Date()
         let dateToday = Calendar.current.component(.weekday, from: date)
         let formatter = DateFormatter() // все ниже сделано для получение коректного времени

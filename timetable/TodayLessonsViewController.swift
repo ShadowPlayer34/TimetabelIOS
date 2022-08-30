@@ -6,7 +6,11 @@
 //
 
 import UIKit
-struct allTimetableStruct{
+
+
+
+class AllTimetableStruct{
+   
     let Monday = ["1. Физра (12:10 - 13:30)", "2. Ин.яз (14:00 - 15:20)", "3. Общая теория интелектуальных систем (15:30 - 16:50)Л", "4. Проектирование программного обеспечения ИС (17:00 - 18:20)Л"]
     let Tuesday = ["1. Спать🛌", "2. Дополнительные разделы физики/БЖЧ (14:00 - 15:20)", "3. Философия (15:30 - 16:50)", "4. Ин.яз (17:00 - 18:20)", "5. /ППОИС (18:30 - 19:50)"]
     let Wednesday = ["1. БЖЧ/ (12:10 - 13:30)Л", "2. Дополнительные разделы физики (14:00 - 15:20)Л", "3. /БЖЧ (15:30 - 16:50)"]
@@ -34,24 +38,35 @@ struct allTimetableStruct{
             return []
         }
     }
-}
-
-
-class TodayLessonsViewController: UIViewController {
-
-    @IBOutlet weak var TimetableLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        TimetableLabel.text = todayTimetable()
-        // Do any additional setup after loading the view.
-    }
     func todayTimetable() -> String{
-        let timetableStrc = allTimetableStruct()
         var timetable = ""
         let date = Date()
         let dateToday = Calendar.current.component(.weekday, from: date)
-        timetable = timetableStrc.take(day: dateToday).joined(separator: "\n")
+        timetable = take(day: dateToday).joined(separator: "\n")
+
         return timetable
     }
+   
+    
+  
+}
 
+
+class TodayLessonsViewController: UIViewController{
+    
+    
+    
+   
+    let allTimetable = AllTimetableStruct()
+    @IBOutlet weak var TimetableLabel: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        TimetableLabel.text = allTimetable.todayTimetable()
+    
+        // Do any additional setup after loading the view.
+    }
+    
+  
+    
 }

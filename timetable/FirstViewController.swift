@@ -15,10 +15,6 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let destinationVC = segue.destination as? TodayLessonsViewController else { return }
-//       
-//    }
     
     @IBAction func unwindSegueToTheFirstVC(segue: UIStoryboardSegue){
         

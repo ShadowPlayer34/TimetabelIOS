@@ -15,9 +15,12 @@ class FullTimetableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+    
     }
     
+    @IBAction func unwindSegueToTheFullTimetableVC(segue: UIStoryboardSegue){
+        
+    }
     
 
 }

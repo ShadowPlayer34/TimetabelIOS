@@ -16,6 +16,12 @@
 		3CB2A3A728BD6462006803E1 /* NextLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */; };
 		3CB2A3A928BD6491006803E1 /* TodayLessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */; };
 		3CB2A3AB28BD64BC006803E1 /* FullTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3AA28BD64BC006803E1 /* FullTimetableViewController.swift */; };
+		3CB2A3AD28BE6509006803E1 /* MondayAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3AC28BE6509006803E1 /* MondayAllViewController.swift */; };
+		3CB2A3B128BE651E006803E1 /* WednesdayAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B028BE651E006803E1 /* WednesdayAllViewController.swift */; };
+		3CB2A3B328BE6529006803E1 /* ThursdayAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B228BE6529006803E1 /* ThursdayAllViewController.swift */; };
+		3CB2A3B528BE6534006803E1 /* FridayAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B428BE6534006803E1 /* FridayAllViewController.swift */; };
+		3CB2A3B728BE654A006803E1 /* SaturdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B628BE654A006803E1 /* SaturdayViewController.swift */; };
+		3CB2A3BD28BE7EEA006803E1 /* TuesdayTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3BC28BE7EEA006803E1 /* TuesdayTimetableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLessonViewController.swift; sourceTree = "<group>"; };
 		3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonsViewController.swift; sourceTree = "<group>"; };
 		3CB2A3AA28BD64BC006803E1 /* FullTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTimetableViewController.swift; sourceTree = "<group>"; };
+		3CB2A3AC28BE6509006803E1 /* MondayAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayAllViewController.swift; sourceTree = "<group>"; };
+		3CB2A3B028BE651E006803E1 /* WednesdayAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayAllViewController.swift; sourceTree = "<group>"; };
+		3CB2A3B228BE6529006803E1 /* ThursdayAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayAllViewController.swift; sourceTree = "<group>"; };
+		3CB2A3B428BE6534006803E1 /* FridayAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayAllViewController.swift; sourceTree = "<group>"; };
+		3CB2A3B628BE654A006803E1 /* SaturdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturdayViewController.swift; sourceTree = "<group>"; };
+		3CB2A3BC28BE7EEA006803E1 /* TuesdayTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayTimetableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +77,16 @@
 				3CB2A39228BD60CE006803E1 /* AppDelegate.swift */,
 				3CB2A39428BD60CE006803E1 /* SceneDelegate.swift */,
 				3CB2A39628BD60CE006803E1 /* FirstViewController.swift */,
-				3CB2A39828BD60CE006803E1 /* Main.storyboard */,
 				3CB2A3AA28BD64BC006803E1 /* FullTimetableViewController.swift */,
 				3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */,
 				3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */,
+				3CB2A3AC28BE6509006803E1 /* MondayAllViewController.swift */,
+				3CB2A3BC28BE7EEA006803E1 /* TuesdayTimetableViewController.swift */,
+				3CB2A3B028BE651E006803E1 /* WednesdayAllViewController.swift */,
+				3CB2A3B228BE6529006803E1 /* ThursdayAllViewController.swift */,
+				3CB2A3B428BE6534006803E1 /* FridayAllViewController.swift */,
+				3CB2A3B628BE654A006803E1 /* SaturdayViewController.swift */,
+				3CB2A39828BD60CE006803E1 /* Main.storyboard */,
 				3CB2A39B28BD60D2006803E1 /* Assets.xcassets */,
 				3CB2A39D28BD60D2006803E1 /* LaunchScreen.storyboard */,
 				3CB2A3A028BD60D2006803E1 /* Info.plist */,
@@ -147,11 +165,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB2A3B528BE6534006803E1 /* FridayAllViewController.swift in Sources */,
+				3CB2A3AD28BE6509006803E1 /* MondayAllViewController.swift in Sources */,
 				3CB2A39728BD60CE006803E1 /* FirstViewController.swift in Sources */,
 				3CB2A39328BD60CE006803E1 /* AppDelegate.swift in Sources */,
+				3CB2A3BD28BE7EEA006803E1 /* TuesdayTimetableViewController.swift in Sources */,
 				3CB2A3A928BD6491006803E1 /* TodayLessonsViewController.swift in Sources */,
 				3CB2A3AB28BD64BC006803E1 /* FullTimetableViewController.swift in Sources */,
+				3CB2A3B728BE654A006803E1 /* SaturdayViewController.swift in Sources */,
 				3CB2A39528BD60CE006803E1 /* SceneDelegate.swift in Sources */,
+				3CB2A3B128BE651E006803E1 /* WednesdayAllViewController.swift in Sources */,
+				3CB2A3B328BE6529006803E1 /* ThursdayAllViewController.swift in Sources */,
 				3CB2A3A728BD6462006803E1 /* NextLessonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +329,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -316,7 +341,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -333,6 +358,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,7 +370,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
