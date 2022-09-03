@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C7EDC8328BF99F100A7F0D7 /* EditTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EDC8228BF99F100A7F0D7 /* EditTimetableViewController.swift */; };
+		3C82721F28C1DB6B004EE794 /* photo-1579546929518-9e396f3cc809.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3C82721E28C1DB6B004EE794 /* photo-1579546929518-9e396f3cc809.jpeg */; };
+		3C84BD9A28C1286F00FA2431 /* TomorrowTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */; };
 		3CB2A39328BD60CE006803E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A39228BD60CE006803E1 /* AppDelegate.swift */; };
 		3CB2A39528BD60CE006803E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A39428BD60CE006803E1 /* SceneDelegate.swift */; };
 		3CB2A39728BD60CE006803E1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A39628BD60CE006803E1 /* FirstViewController.swift */; };
@@ -22,9 +25,13 @@
 		3CB2A3B528BE6534006803E1 /* FridayAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B428BE6534006803E1 /* FridayAllViewController.swift */; };
 		3CB2A3B728BE654A006803E1 /* SaturdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B628BE654A006803E1 /* SaturdayViewController.swift */; };
 		3CB2A3BD28BE7EEA006803E1 /* TuesdayTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3BC28BE7EEA006803E1 /* TuesdayTimetableViewController.swift */; };
+		3CFAD26D28C0C0B40067664F /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CFAD26C28C0C0B40067664F /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C7EDC8228BF99F100A7F0D7 /* EditTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimetableViewController.swift; sourceTree = "<group>"; };
+		3C82721E28C1DB6B004EE794 /* photo-1579546929518-9e396f3cc809.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "photo-1579546929518-9e396f3cc809.jpeg"; path = "../../../Downloads/photo-1579546929518-9e396f3cc809.jpeg"; sourceTree = "<group>"; };
+		3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowTimetableViewController.swift; sourceTree = "<group>"; };
 		3CB2A38F28BD60CE006803E1 /* timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB2A39228BD60CE006803E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CB2A39428BD60CE006803E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +49,7 @@
 		3CB2A3B428BE6534006803E1 /* FridayAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayAllViewController.swift; sourceTree = "<group>"; };
 		3CB2A3B628BE654A006803E1 /* SaturdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturdayViewController.swift; sourceTree = "<group>"; };
 		3CB2A3BC28BE7EEA006803E1 /* TuesdayTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayTimetableViewController.swift; sourceTree = "<group>"; };
+		3CFAD26C28C0C0B40067664F /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +83,15 @@
 			isa = PBXGroup;
 			children = (
 				3CB2A39228BD60CE006803E1 /* AppDelegate.swift */,
+				3C7EDC8228BF99F100A7F0D7 /* EditTimetableViewController.swift */,
 				3CB2A39428BD60CE006803E1 /* SceneDelegate.swift */,
 				3CB2A39628BD60CE006803E1 /* FirstViewController.swift */,
-				3CB2A3AA28BD64BC006803E1 /* FullTimetableViewController.swift */,
-				3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */,
 				3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */,
+				3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */,
+				3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */,
+				3CB2A3AA28BD64BC006803E1 /* FullTimetableViewController.swift */,
+				3CFAD26C28C0C0B40067664F /* background.jpg */,
+				3C82721E28C1DB6B004EE794 /* photo-1579546929518-9e396f3cc809.jpeg */,
 				3CB2A3AC28BE6509006803E1 /* MondayAllViewController.swift */,
 				3CB2A3BC28BE7EEA006803E1 /* TuesdayTimetableViewController.swift */,
 				3CB2A3B028BE651E006803E1 /* WednesdayAllViewController.swift */,
@@ -153,7 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB2A39F28BD60D2006803E1 /* LaunchScreen.storyboard in Resources */,
+				3CFAD26D28C0C0B40067664F /* background.jpg in Resources */,
 				3CB2A39C28BD60D2006803E1 /* Assets.xcassets in Resources */,
+				3C82721F28C1DB6B004EE794 /* photo-1579546929518-9e396f3cc809.jpeg in Resources */,
 				3CB2A39A28BD60CE006803E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +181,7 @@
 			files = (
 				3CB2A3B528BE6534006803E1 /* FridayAllViewController.swift in Sources */,
 				3CB2A3AD28BE6509006803E1 /* MondayAllViewController.swift in Sources */,
+				3C7EDC8328BF99F100A7F0D7 /* EditTimetableViewController.swift in Sources */,
 				3CB2A39728BD60CE006803E1 /* FirstViewController.swift in Sources */,
 				3CB2A39328BD60CE006803E1 /* AppDelegate.swift in Sources */,
 				3CB2A3BD28BE7EEA006803E1 /* TuesdayTimetableViewController.swift in Sources */,
@@ -175,6 +190,7 @@
 				3CB2A3B728BE654A006803E1 /* SaturdayViewController.swift in Sources */,
 				3CB2A39528BD60CE006803E1 /* SceneDelegate.swift in Sources */,
 				3CB2A3B128BE651E006803E1 /* WednesdayAllViewController.swift in Sources */,
+				3C84BD9A28C1286F00FA2431 /* TomorrowTimetableViewController.swift in Sources */,
 				3CB2A3B328BE6529006803E1 /* ThursdayAllViewController.swift in Sources */,
 				3CB2A3A728BD6462006803E1 /* NextLessonViewController.swift in Sources */,
 			);

@@ -18,6 +18,13 @@ class FullTimetableViewController: UIViewController {
     
     }
     
+//    var alltimetable = AllTimetableStruct()
+//    
+//    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
+//        guard let destinationVC = seque.destination as? FirstViewController else { return }
+//        alltimetable = destinationVC.alltimetable
+//    }
+    
     @IBAction func unwindSegueToTheFullTimetableVC(segue: UIStoryboardSegue){
         
     }
