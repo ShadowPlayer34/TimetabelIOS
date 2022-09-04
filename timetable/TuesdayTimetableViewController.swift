@@ -12,8 +12,9 @@ class TuesdayTimetableViewController: UIViewController {
     @IBOutlet weak var TuesdayTimetableLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        TuesdayTimetableLabel.text = AllTimetableStruct().take(day: 3).joined(separator: "\n")
-      
+        var tuesdayText = [""]
+        tuesdayText = AllTimetableStruct().take(day: 3).0
+        TuesdayTimetableLabel.text = tuesdayText.joined(separator: "\n")
     }
   
 }

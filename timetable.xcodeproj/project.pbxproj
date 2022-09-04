@@ -83,13 +83,13 @@
 			isa = PBXGroup;
 			children = (
 				3CB2A39228BD60CE006803E1 /* AppDelegate.swift */,
-				3C7EDC8228BF99F100A7F0D7 /* EditTimetableViewController.swift */,
 				3CB2A39428BD60CE006803E1 /* SceneDelegate.swift */,
 				3CB2A39628BD60CE006803E1 /* FirstViewController.swift */,
 				3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */,
 				3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */,
 				3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */,
 				3CB2A3AA28BD64BC006803E1 /* FullTimetableViewController.swift */,
+				3C7EDC8228BF99F100A7F0D7 /* EditTimetableViewController.swift */,
 				3CFAD26C28C0C0B40067664F /* background.jpg */,
 				3C82721E28C1DB6B004EE794 /* photo-1579546929518-9e396f3cc809.jpeg */,
 				3CB2A3AC28BE6509006803E1 /* MondayAllViewController.swift */,
@@ -338,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JLC9YVG32L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = timetable/Info.plist;
@@ -348,6 +348,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,7 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JLC9YVG32L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = timetable/Info.plist;
@@ -378,6 +379,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

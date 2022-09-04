@@ -12,8 +12,9 @@ class FridayAllViewController: UIViewController {
     @IBOutlet weak var FridayTimetableLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        FridayTimetableLabel.text = AllTimetableStruct().take(day: 6).joined(separator: "\n")
-        
+        var fridayText = [""]
+        fridayText = AllTimetableStruct().take(day: 6).0
+        FridayTimetableLabel.text = fridayText.joined(separator: "\n")
     }
     
 

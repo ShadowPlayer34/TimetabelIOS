@@ -6,71 +6,101 @@
 //
 
 import UIKit
-
+import QuartzCore
 
 
 class DefaultAllTimetableStruct{
    
-    var Monday = ["1. Физра (12:10 - 13:30)", "2. Ин.яз (14:00 - 15:20)", "3. Общая теория интелектуальных систем 2/108 (15:30 - 16:50) Л", "4. Проектирование программного обеспечения ИС 2/409 (17:00 - 18:20)Л"]
+    var Monday = ["Физра (12:10 - 13:30)", "Ин.яз (14:00 - 15:20)", "Общая теория интелектуальных систем 2/108 (15:30 - 16:50) Л", "Проектирование программного обеспечения ИС 2/409 (17:00 - 18:20)Л"]
     var Tuesday = ["1. Спать🛌", "2. Дополнительные разделы физики 402/БЖЧ 437 (14:00 - 15:20)", "3. Философия 5/307 (15:30 - 16:50)", "4. Ин.яз (17:00 - 18:20)", "5. /ППОИС 2/404 (18:30 - 19:50)"]
     var Wednesday = ["1. БЖЧ 401 (12:10 - 13:30)Л", "2. Дополнительные разделы физики 443 (14:00 - 15:20)Л", "3. /БЖЧ 412 (15:30 - 16:50)"]
     var Thursday = ["1. Операционные системы 2/410б /Философия 443 (12:10 - 13:30)Л", "2. ОТИС 2/310 /МОИС 2/118 (14:00 - 15:20)", "3. ОТИС 2/310 /МОИС 2/118 (15:30 - 16:50)"]
     var Friday = ["1. Физра (12:10 - 13:30)", "2. ОС 2/118 /ППОИС 2/406 (14:00 - 15:20)", "3. ОС 2/118/ППОИС 2/406 (15:30 - 16:50)", "4. Ин.яз 423 (17:00 - 18:20)"]
-    var Sunday = ["1. Философия 401 (12:10 - 13:30)Л", "2. Математические основы ИС 2/401а (14:00 - 15:20)Л", "3. Численные методы 301 (15:30 - 16:50)Л", "4. Численные методы 511 (17:00 - 18:20)"]
-    let Saturday = ["Chill"]
+    var Saturday = ["1. Философия 401 (12:10 - 13:30)Л", "2. Математические основы ИС 2/401а (14:00 - 15:20)Л", "3. Численные методы 301 (15:30 - 16:50)Л", "4. Численные методы 511 (17:00 - 18:20)"]
+    let Sunday = ["Chill"]
     
 }
 
 class AllTimetableStruct{
    
-    var Monday = ["1. Физра \n(12:10 - 13:30)\n", "2. Ин.яз \n(14:00 - 15:20)\n", "3. Общая теория интелектуальных систем (2/108) \n(15:30 - 16:50)Л\n", "4. Проектирование программного обеспечения ИС (2/409) \n(17:00 - 18:20)Л"]
-    var Tuesday = ["1. Спать🛌\n", "2. Спать🛌\n", "3. Дополнительные разделы физики (402) \n(14:00 - 15:20)\n", "4. Философия (5/307) \n(15:30 - 16:50)\n", "5. Ин.яз \n(17:00 - 18:20)\n"]
-    var Wednesday = ["1. БЖЧ (401) \n(12:10 - 13:30)Л\n", "2. Дополнительные разделы физики (443) \n(14:00 - 15:20)Л\n", "3. БЖЧ (412) \n(15:30 - 16:50)\n"]
-    var Thursday = ["1. Операционные системы (2/410б) \n(12:10 - 13:30)Л\n", "2. ОТИС (2/310)  \n(14:00 - 15:20)\n", "3. ОТИС (2/310) \n(15:30 - 16:50)\n"]
-    var Friday = ["1. Физра \n(12:10 - 13:30)\n", "2. ОС (2/118) \n(14:00 - 15:20)\n", "3. ОС (2/118) \n(15:30 - 16:50)\n", "4. Ин.яз (423) \n(17:00 - 18:20)\n"]
-    var Sunday = ["1. Философия (401) \n(12:10 - 13:30)Л\n", "2. Математические основы ИС (2/401а) \n(14:00 - 15:20)Л\n", "3. Численные методы (301) \n(15:30 - 16:50)Л\n", "4. Численные методы (511) \n(17:00 - 18:20)"]
+    var Monday = ["Физра", "Ин.яз", "ОТИС(2/108)Л", "ППОИС(2/409)Л"]
+    var mondayTime = ["12:10-13:30", "14:00-15:20", "15:30-16:50", "17:00-18:20"]
+    var mondayCab = ["", "", "2 корпус аудитория 108", "2 корпус аудитория 409"]
     
-    var MondayLow = ["1. Физра \n(12:10 - 13:30)\n", "2. Ин.яз \n(14:00 - 15:20)\n", "3. Общая теория интелектуальных систем (2/108) \n(15:30 - 16:50)Л\n", "4. Проектирование программного обеспечения ИС (2/409) \n(17:00 - 18:20)Л"]
-    var TuesdayLow = ["1. Спать🛌\n", "2. БЖЧ (437) \n(14:00 - 15:20)\n", "3. Философия (5/307) \n(15:30 - 16:50)\n", "4. Ин.яз \n(17:00 - 18:20)\n", "5. ППОИС (2/404) \n(18:30 - 19:50)"]
-    var WednesdayLow = ["1. БЖЧ (401) \n(12:10 - 13:30)Л\n", "2. Дополнительные разделы физики (443) \n(14:00 - 15:20)Л\n"]
-    var ThursdayLow = ["1. Операционные системы (2/410б) / Философия (443) \n(12:10 - 13:30)Л\n", "2. МОИС (2/118) \n(14:00 - 15:20)\n", "3. МОИС (2/118) \n(15:30 - 16:50)\n", "4. Ин.яз \n(17:00 - 18:20)\n"]
-    var FridayLow = ["1. Физра \n(12:10 - 13:30)\n", "2. ППОИС (2/406) \n(14:00 - 15:20)\n", "3. ППОИС (2/406) \n(15:30 - 16:50)\n", "4. Ин.яз (423) \n(17:00 - 18:20)\n"]
-    var SundayLow = ["1. Философия (401) \n(12:10 - 13:30)Л\n", "2. Математические основы ИС (2/401а) \n(14:00 - 15:20)Л\n", "3. Численные методы (301) \n(15:30 - 16:50)Л\n", "4. Численные методы (511) \n(17:00 - 18:20)"]
-    let Saturday = ["Chill"]
-    var typeOfWeek = "Low"
-    func take(day: Int) -> Array<String>{
+    var Tuesday = ["Дополнительные разделы физики (402)", "Философия (5/307)", "Ин.яз"]
+    var tuesdayTime = ["14:00-15:20", "(15:30 - 16:50)", "(17:00 - 18:20)"]
+    var tuesdayCab = ["", "", "", "", ""]
+    
+    var Wednesday = ["БЖЧ (401)Л", "Дополнительные разделы физики (443)Л", "БЖЧ (412)"]
+    var wednesdayTime = ["12:10-13:30", "14:00-15:20", "(15:30 - 16:50)"]
+    var wednesdayCab = ["", "", "", "", ""]
+    
+    var Thursday = ["ОС(2/410б)Л", "ОТИС (2/310)", "ОТИС (2/310)"]
+    var thursdayTime = ["12:10-13:30", "14:00-15:20", "(15:30 - 16:50)"]
+    var thursdayCab = ["", "", "", "", ""]
+    
+    var Friday = ["Физра", "ОС (2/118)", "ОС (2/118)", "Ин.яз (423)"]
+    var fridayTime = ["12:10-13:30", "14:00-15:20", "(15:30 - 16:50)", "(17:00 - 18:20)"]
+    var fridayCab = ["", "", "", "", ""]
+    
+    var Saturday = ["Философия (401))Л", "МОИС(2/401а)Л", "Численные методы (301)Л", "Численные методы (511)"]
+    var saturdayTime = ["12:10-13:30", "14:00-15:20", "(15:30 - 16:50)", "(17:00 - 18:20)"]
+    var saturdayCab = ["", "", "", "", ""]
+    
+    
+    var MondayLow = ["Физра", "Ин.яз", "ОТИС(2/108)Л", "ППОИС(2/409)Л"]
+    var mondayLowTime = ["12:10-13:30", "14:00-15:20", "15:30-16:50", "17:00-18:20"]
+    var mondayLowCab = ["", "", "", "", ""]
+    
+    var TuesdayLow = ["БЖЧ (437)", "Философия (5/307)", "4. Ин.яз", "5. ППОИС (2/404)"]
+    var tuesdayLowTime = ["14:00-15:20", "(15:30 - 16:50)", "(17:00 - 18:20)", "18:30-19:50"]
+    var tuesdayLowCab = ["", "", "", "", ""]
+    
+    var WednesdayLow = ["БЖЧ (401)Л", "Дополнительные разделы физики (443)Л"]
+    var wednesdayLowTime = ["12:10-13:30", "14:00-15:20"]
+    var wednesdayLowCab = ["", "", "", "", ""]
+    
+    var ThursdayLow = ["Философия (443)Л", "МОИС (2/118)", "МОИС (2/118)", "Ин.яз"]
+    var thursdayLowTime = ["12:10-13:30", "14:00-15:20", "15:30-16:50", "17:00-18:20"]
+    var thursdayLowCab = ["", "", "", "", ""]
+    
+    var FridayLow = ["Физра", "ППОИС (2/406)", "ППОИС (2/406)", "Ин.яз (423)"]
+    var fridayLowTime = ["12:10-13:30", "14:00-15:20", "15:30-16:50", "17:00-18:20"]
+    var fridayLowCab = ["", "", "", "", ""]
+    
+    var SaturdayLow = ["Философия (401)Л", "МОИС(2/401а)Л", "Численные методы (301)Л", "Численные методы (511)"]
+    var saturdayLowTime = ["12:10-13:30", "14:00-15:20", "15:30-16:50", "17:00-18:20"]
+    var saturdayLowCab = ["", "", "", "", ""]
+    let Sunday = ["Chill", ""]
+    var typeOfWeek = "Нижняя"
+    func take(day: Int) -> ([String], [String], [String]){
         typeOfWeekFunc()
         switch day{
         case 1:
-                return Saturday
+                return (Sunday, [" - ", " - "], ["", ""])
         case 2:
-            if typeOfWeek == "High"{
-                return Monday } else { return MondayLow }
+            if typeOfWeek == "Верхняя"{
+                return (Monday, mondayTime, mondayCab) } else { return (MondayLow, mondayLowTime, mondayLowCab) }
         case 3:
-            if typeOfWeek == "High"{
-                return Tuesday } else { return TuesdayLow }
+            if typeOfWeek == "Верхняя"{
+                return (Tuesday, tuesdayTime, tuesdayCab) } else { return (TuesdayLow, tuesdayLowTime, tuesdayLowCab) }
         case 4:
-            if typeOfWeek == "High"{
-                return Wednesday } else { return WednesdayLow }
+            if typeOfWeek == "Верхняя"{
+                return (Wednesday, wednesdayTime, wednesdayCab) } else { return (WednesdayLow, wednesdayLowTime, wednesdayLowCab) }
         case 5:
-            if typeOfWeek == "High"{
-                return Thursday } else { return ThursdayLow }
+            if typeOfWeek == "Верхняя"{
+                return (Thursday, thursdayTime, thursdayCab) } else { return (ThursdayLow, thursdayLowTime, thursdayLowCab) }
         case 6:
-            if typeOfWeek == "High"{
-                return Friday } else { return FridayLow }
+            if typeOfWeek == "Верхняя"{
+                return (Friday, fridayTime, fridayCab) } else { return (FridayLow, fridayLowTime, fridayLowCab) }
         case 7:
-            if typeOfWeek == "High"{
-                return Sunday } else { return SundayLow }
+            if typeOfWeek == "Верхняя"{
+                return (Saturday, saturdayTime, saturdayCab) } else { return (SaturdayLow, saturdayLowTime, saturdayLowCab) }
         default:
-            return []
+            return ([""], [""], [""])
         }
     }
-    
-    init(){
-        
-    }
-
-    
+    init(){}
     init(Monday: [String]){
         self.Monday = Monday
     }
@@ -84,16 +114,16 @@ class AllTimetableStruct{
         let diffDay = diff.day!
         print(diffDay)
         if diffDay % 7 == 0 || (diffDay / 7) % 2 == 0{
-            typeOfWeek = "Low"
+            typeOfWeek = "Нижняя"
         }else if diffDay % 7 == 0 || (diffDay / 7) % 2 == 1{
-            typeOfWeek = "High"
+            typeOfWeek = "Верхняя"
         }
     }
     func todayTimetable() -> String{
         let date = Date()
         var timetable = ""
         let weekdayToday = Calendar.current.component(.weekday, from: date)
-        timetable = take(day: weekdayToday).joined(separator: "\n")
+        timetable = take(day: weekdayToday).0.joined(separator: "\n")
 
         return timetable
     }
@@ -105,29 +135,82 @@ class AllTimetableStruct{
         if dateToday == 7{
             dateToday = 1
         }
-        timetable = take(day: dateToday).joined(separator: "\n")
+        timetable = take(day: dateToday).0.joined(separator: "\n")
 
         return timetable
     }
 
 }
 
-
-
-
 class TodayLessonsViewController: UIViewController{
- 
-//    var allTimetable = AllTimetableStruct()
-    @IBOutlet weak var TimetableLabel: UILabel!
+    
+   
+    @IBOutlet weak var FirstLessonLabel: UILabel!
+    @IBOutlet weak var StartTimeOfFirstLesson: UILabel!
+    @IBOutlet weak var EndTimeOfFirstLesson: UILabel!
+    @IBOutlet weak var CabOfFirstLesson: UILabel!
+    @IBOutlet weak var SecondLessonLabel: UILabel!
+    @IBOutlet weak var StartTimeOfSecondLesson: UILabel!
+    @IBOutlet weak var EndtTimeOfSecondLesson: UILabel!
+    @IBOutlet weak var CabForSecondLesson: UILabel!
+    @IBOutlet weak var ThirdLessonLabel: UILabel!
+    @IBOutlet weak var StartTimeOfThirdLesson: UILabel!
+    @IBOutlet weak var EndTimeOfThirdLesson: UILabel!
+    @IBOutlet weak var CabOfThirdLesson: UILabel!
+    @IBOutlet weak var FourthLessonLabel: UILabel!
+    @IBOutlet weak var StartTimeOfFourthLesson: UILabel!
+    @IBOutlet weak var EndTimeOfFourthLesson: UILabel!
+    @IBOutlet weak var CabOfFourthLesson: UILabel!
+    
+    @IBOutlet weak var TypeOfLessonLabel1: UILabel!
+    @IBOutlet weak var DayCountWeekTodayLabel: UILabel!
+    @IBOutlet weak var WeekdayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "photo-1579546929518-9e396f3cc809")
-        backgroundImage.contentMode = .scaleAspectFill
-        view.insertSubview(backgroundImage, at: 0)
+//        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+//        backgroundImage.image = UIImage(named: "photo-1579546929518-9e396f3cc809")
+//        backgroundImage.contentMode = .scaleAspectFill
+//        view.insertSubview(backgroundImage, at: 0)
         
-        TimetableLabel.text = AllTimetableStruct().todayTimetable()
-        // Do any additional setup after loading the view.
+        TypeOfLessonLabel1.backgroundColor = .orange
+        TypeOfLessonLabel1.layer.cornerRadius = 7
+        TypeOfLessonLabel1.layer.masksToBounds = true // разобраться с тенью
+        let numberOfWeek = Calendar.current.component(.weekday, from: Date())
+        WeekdayLabel.text = Calendar.current.WeekdayName(of: numberOfWeek)
+//        WeekdayLabel.layer.shadowOpacity = 0.08
+        let todayTimetable = AllTimetableStruct().take(day: numberOfWeek)
+        let date = Date()
+        let format = "dd MMMM"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+
+        let str = dateFormatter.string(from: date)
+        DayCountWeekTodayLabel.text = "\(str) • \(AllTimetableStruct().take(day: numberOfWeek).0.endIndex) пары • \(AllTimetableStruct().typeOfWeek) неделя"
+        
+        FirstLessonLabel.text = todayTimetable.0[0]
+        StartTimeOfFirstLesson.text = todayTimetable.1[0].components(separatedBy: "-")[0]
+        EndTimeOfFirstLesson.text = todayTimetable.1[0].components(separatedBy: "-")[1]
+        CabOfFirstLesson.text = todayTimetable.2[0]
+        
+        SecondLessonLabel.text = todayTimetable.0[1]
+        StartTimeOfSecondLesson.text = todayTimetable.1[1].components(separatedBy: "-")[0]
+        EndtTimeOfSecondLesson.text = todayTimetable.1[1].components(separatedBy: "-")[1]
+        CabForSecondLesson.text = todayTimetable.2[1]
+        
+        if todayTimetable.0.indices.contains(2){
+            ThirdLessonLabel.text = todayTimetable.0[2]
+            StartTimeOfThirdLesson.text = todayTimetable.1[2].components(separatedBy: "-")[0]
+            EndTimeOfThirdLesson.text = todayTimetable.1[2].components(separatedBy: "-")[1]
+            CabOfThirdLesson.text = todayTimetable.2[2]
+        }
+        
+        if todayTimetable.0.indices.contains(3){
+            FourthLessonLabel.text = todayTimetable.0[3]
+            StartTimeOfFourthLesson.text = todayTimetable.1[3].components(separatedBy: "-")[0]
+            EndTimeOfFourthLesson.text = todayTimetable.1[3].components(separatedBy: "-")[1]
+            CabOfFourthLesson.text = todayTimetable.2[3]
+        }
     }
     
 //    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
@@ -135,4 +218,30 @@ class TodayLessonsViewController: UIViewController{
 //        allTimetable = destinationVC.alltimetable
 //    }
     
+    }
+
+extension Calendar{
+    func WeekdayName(of numberWeekDay: Int) -> String{
+        switch numberWeekDay{
+        case 1:
+            return "Воскресенье"
+        case 2:
+            return "Понедельник"
+        case 3:
+            return "Вторник"
+        case 4:
+            return "Среда"
+        case 5:
+            return "Четверг"
+        case 6:
+            return "Пятница"
+        case 7:
+            return "Суббота"
+        default:
+            return ""
+        }
+        
+    }
 }
+
+

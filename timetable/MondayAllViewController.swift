@@ -16,7 +16,9 @@ class MondayAllViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MondayTimatableLabel.text = AllTimetableStruct().take(day: 2).joined(separator: "\n")
+        var mondayText = [""]
+        mondayText = Array<String>(AllTimetableStruct().take(day: 2).0)
+        MondayTimatableLabel.text = mondayText.joined(separator: "\n")
         
     }
 //    var alltimetable = AllTimetableStruct()

@@ -13,7 +13,7 @@ class EditTimetableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        EditTimetableTextView.text = AllTimetableStruct().take(day: 2).joined(separator: "\n")
+        EditTimetableTextView.text = AllTimetableStruct().take(day: 2).0.joined(separator: "\n")
     }
     
     

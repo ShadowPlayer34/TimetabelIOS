@@ -35,22 +35,23 @@ class NextLessonViewController: UIViewController {
         let timeNowInt = Int(timeNow[0] + timeNow[1])!
       
         let todayTimetable = timetable.take(day: dateToday) //получение нужного дня
-        switch timeNowInt{
-        case 1000...1209:
-            return todayTimetable[0]
-        case 1210...1359:
-            return todayTimetable[1]
-        case 1400...1529:
-            return todayTimetable[2]
-        case 1530...1659:
-            if todayTimetable.indices.contains(3){
-                return todayTimetable[3]}else { return "Нету пары" }
-        case 1700...1820:
-            if todayTimetable.indices.contains(4){ //проверка на наличие данного индекса в массиве
-                return todayTimetable[4]}else{return "Нету пары"}
-        default:
-            return "You can sleep🌙"
-        }
+//        switch timeNowInt{
+//        case 1000...1209:
+//            return todayTimetable[0]
+//        case 1210...1359:
+//            return todayTimetable[1]
+//        case 1400...1529:
+//            return todayTimetable[2]
+//        case 1530...1659:
+//            if todayTimetable.indices.contains(3){
+//                return todayTimetable[3]}else { return "Нету пары" }
+//        case 1700...1820:
+//            if todayTimetable.indices.contains(4){ //проверка на наличие данного индекса в массиве
+//                return todayTimetable[4]}else{return "Нету пары"}
+//        default:
+//            return "You can sleep🌙"
+//        }
+        return ""
     }
 
     
