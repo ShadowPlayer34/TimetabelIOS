@@ -10,15 +10,21 @@ import UIKit
 class TomorrowTimetableViewController: UIViewController {
 
     let allTimetable = AllTimetableStruct()
-    @IBOutlet weak var TomorrowTimetableLabel: UILabel!
+
+    @IBOutlet weak var DayCountWeekTomorrowLabel: UILabel!
+    @IBOutlet weak var WeekdayTomorrowLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "photo-1579546929518-9e396f3cc809")
-        backgroundImage.contentMode = .scaleAspectFill
-        view.insertSubview(backgroundImage, at: 0)
-        TomorrowTimetableLabel.text = allTimetable.yesterdayTimetable()
+        let numberOfWeek = Calendar.current.component(.weekday, from: Date()) + 1
+        let date = Date()
+        let format = "dd MMMM"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: date)
+        let str = dateFormatter.string(from: tomorrow!)
+        WeekdayTomorrowLabel.text = Calendar.current.WeekdayName(of: numberOfWeek)
+        DayCountWeekTomorrowLabel.text = "\(str) • \(AllTimetableStruct().take(day: numberOfWeek).0.endIndex) пары • \(AllTimetableStruct().typeOfWeek) неделя"
     }
     
 

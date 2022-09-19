@@ -18,9 +18,9 @@ class EditTimetableViewController: UIViewController {
     
     
     @IBAction func SendTimetableTapped() {
-        let temp = EditTimetableTextView.text.components(separatedBy: "\n")
-        AllTimetableStruct().Monday.removeAll()
-        AllTimetableStruct(Monday: temp)
+//        let temp = EditTimetableTextView.text.components(separatedBy: "\n")
+//        AllTimetableStruct().Monday.removeAll()
+//        AllTimetableStruct(Monday: temp)
 //        alltimetable.Monday.removeAll()
 //        alltimetable.Monday = temp
     }
@@ -30,7 +30,9 @@ class EditTimetableViewController: UIViewController {
 //        guard let destinationVC = seque.destination as? MondayAllViewController else { return }
 //        alltimetable = destinationVC.alltimetable
 //    }
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
 extension AllTimetableStruct{
