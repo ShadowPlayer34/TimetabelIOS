@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C7EDC8328BF99F100A7F0D7 /* EditTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EDC8228BF99F100A7F0D7 /* EditTimetableViewController.swift */; };
+		3C6F7CCD28DBC33C004F515F /* WeekdayTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F7CCC28DBC33C004F515F /* WeekdayTimetableViewController.swift */; };
+		3C7D6DFF28D8A47000FA1748 /* LessonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D6DFE28D8A47000FA1748 /* LessonTableViewCell.swift */; };
 		3C84BD9A28C1286F00FA2431 /* TomorrowTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */; };
 		3CB2A39328BD60CE006803E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A39228BD60CE006803E1 /* AppDelegate.swift */; };
 		3CB2A39528BD60CE006803E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A39428BD60CE006803E1 /* SceneDelegate.swift */; };
@@ -17,18 +18,13 @@
 		3CB2A39F28BD60D2006803E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB2A39D28BD60D2006803E1 /* LaunchScreen.storyboard */; };
 		3CB2A3A728BD6462006803E1 /* NextLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */; };
 		3CB2A3A928BD6491006803E1 /* TodayLessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */; };
-		3CB2A3AB28BD64BC006803E1 /* FullTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3AA28BD64BC006803E1 /* FullTimetableViewController.swift */; };
-		3CB2A3AD28BE6509006803E1 /* MondayAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3AC28BE6509006803E1 /* MondayAllViewController.swift */; };
-		3CB2A3B128BE651E006803E1 /* WednesdayAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B028BE651E006803E1 /* WednesdayAllViewController.swift */; };
-		3CB2A3B328BE6529006803E1 /* ThursdayAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B228BE6529006803E1 /* ThursdayAllViewController.swift */; };
-		3CB2A3B528BE6534006803E1 /* FridayAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B428BE6534006803E1 /* FridayAllViewController.swift */; };
-		3CB2A3B728BE654A006803E1 /* SaturdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3B628BE654A006803E1 /* SaturdayViewController.swift */; };
-		3CB2A3BD28BE7EEA006803E1 /* TuesdayTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3BC28BE7EEA006803E1 /* TuesdayTimetableViewController.swift */; };
-		3CFAD26D28C0C0B40067664F /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CFAD26C28C0C0B40067664F /* background.jpg */; };
+		3CDAA3F728DB97A1001B7D24 /* WeekdayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA3F628DB97A1001B7D24 /* WeekdayCollectionViewCell.swift */; };
+		3CDAA3FD28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA3FC28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C7EDC8228BF99F100A7F0D7 /* EditTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimetableViewController.swift; sourceTree = "<group>"; };
+		3C6F7CCC28DBC33C004F515F /* WeekdayTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayTimetableViewController.swift; sourceTree = "<group>"; };
+		3C7D6DFE28D8A47000FA1748 /* LessonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewCell.swift; sourceTree = "<group>"; };
 		3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowTimetableViewController.swift; sourceTree = "<group>"; };
 		3CB2A38F28BD60CE006803E1 /* timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB2A39228BD60CE006803E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,14 +36,8 @@
 		3CB2A3A028BD60D2006803E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLessonViewController.swift; sourceTree = "<group>"; };
 		3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonsViewController.swift; sourceTree = "<group>"; };
-		3CB2A3AA28BD64BC006803E1 /* FullTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTimetableViewController.swift; sourceTree = "<group>"; };
-		3CB2A3AC28BE6509006803E1 /* MondayAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayAllViewController.swift; sourceTree = "<group>"; };
-		3CB2A3B028BE651E006803E1 /* WednesdayAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayAllViewController.swift; sourceTree = "<group>"; };
-		3CB2A3B228BE6529006803E1 /* ThursdayAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayAllViewController.swift; sourceTree = "<group>"; };
-		3CB2A3B428BE6534006803E1 /* FridayAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayAllViewController.swift; sourceTree = "<group>"; };
-		3CB2A3B628BE654A006803E1 /* SaturdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturdayViewController.swift; sourceTree = "<group>"; };
-		3CB2A3BC28BE7EEA006803E1 /* TuesdayTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayTimetableViewController.swift; sourceTree = "<group>"; };
-		3CFAD26C28C0C0B40067664F /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = SOURCE_ROOT; };
+		3CDAA3F628DB97A1001B7D24 /* WeekdayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayCollectionViewCell.swift; sourceTree = "<group>"; };
+		3CDAA3FC28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTimetableCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,15 +76,10 @@
 				3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */,
 				3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */,
 				3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */,
-				3CB2A3AA28BD64BC006803E1 /* FullTimetableViewController.swift */,
-				3C7EDC8228BF99F100A7F0D7 /* EditTimetableViewController.swift */,
-				3CFAD26C28C0C0B40067664F /* background.jpg */,
-				3CB2A3AC28BE6509006803E1 /* MondayAllViewController.swift */,
-				3CB2A3BC28BE7EEA006803E1 /* TuesdayTimetableViewController.swift */,
-				3CB2A3B028BE651E006803E1 /* WednesdayAllViewController.swift */,
-				3CB2A3B228BE6529006803E1 /* ThursdayAllViewController.swift */,
-				3CB2A3B428BE6534006803E1 /* FridayAllViewController.swift */,
-				3CB2A3B628BE654A006803E1 /* SaturdayViewController.swift */,
+				3CDAA3FC28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift */,
+				3C7D6DFE28D8A47000FA1748 /* LessonTableViewCell.swift */,
+				3CDAA3F628DB97A1001B7D24 /* WeekdayCollectionViewCell.swift */,
+				3C6F7CCC28DBC33C004F515F /* WeekdayTimetableViewController.swift */,
 				3CB2A39828BD60CE006803E1 /* Main.storyboard */,
 				3CB2A39B28BD60D2006803E1 /* Assets.xcassets */,
 				3CB2A39D28BD60D2006803E1 /* LaunchScreen.storyboard */,
@@ -162,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB2A39F28BD60D2006803E1 /* LaunchScreen.storyboard in Resources */,
-				3CFAD26D28C0C0B40067664F /* background.jpg in Resources */,
 				3CB2A39C28BD60D2006803E1 /* Assets.xcassets in Resources */,
 				3CB2A39A28BD60CE006803E1 /* Main.storyboard in Resources */,
 			);
@@ -175,19 +159,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CB2A3B528BE6534006803E1 /* FridayAllViewController.swift in Sources */,
-				3CB2A3AD28BE6509006803E1 /* MondayAllViewController.swift in Sources */,
-				3C7EDC8328BF99F100A7F0D7 /* EditTimetableViewController.swift in Sources */,
 				3CB2A39728BD60CE006803E1 /* FirstViewController.swift in Sources */,
 				3CB2A39328BD60CE006803E1 /* AppDelegate.swift in Sources */,
-				3CB2A3BD28BE7EEA006803E1 /* TuesdayTimetableViewController.swift in Sources */,
+				3CDAA3FD28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift in Sources */,
 				3CB2A3A928BD6491006803E1 /* TodayLessonsViewController.swift in Sources */,
-				3CB2A3AB28BD64BC006803E1 /* FullTimetableViewController.swift in Sources */,
-				3CB2A3B728BE654A006803E1 /* SaturdayViewController.swift in Sources */,
+				3C6F7CCD28DBC33C004F515F /* WeekdayTimetableViewController.swift in Sources */,
+				3C7D6DFF28D8A47000FA1748 /* LessonTableViewCell.swift in Sources */,
 				3CB2A39528BD60CE006803E1 /* SceneDelegate.swift in Sources */,
-				3CB2A3B128BE651E006803E1 /* WednesdayAllViewController.swift in Sources */,
+				3CDAA3F728DB97A1001B7D24 /* WeekdayCollectionViewCell.swift in Sources */,
 				3C84BD9A28C1286F00FA2431 /* TomorrowTimetableViewController.swift in Sources */,
-				3CB2A3B328BE6529006803E1 /* ThursdayAllViewController.swift in Sources */,
 				3CB2A3A728BD6462006803E1 /* NextLessonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import QuartzCore
 
 
 class DefaultAllTimetableStruct{
@@ -60,7 +59,7 @@ class AllTimetableStruct{
     var mondayLowIsLecture = [false, false, true, true]
     
     var TuesdayLow = ["БЖЧ", "Философия", "Ин.яз", "ППОИС"]
-    var tuesdayLowTime = ["14:00-15:20", "(15:30 - 16:50)", "(17:00 - 18:20)", "18:30-19:50"]
+    var tuesdayLowTime = ["14:00-15:20", "15:30 - 16:50", "17:00 - 18:20", "18:30-19:50"]
     var tuesdayLowCab = ["1 корпус 437 аудитория", "5 корпус 307 аудитория", "", "2 корпус 404 аудитория"]
     var tuesdayLowIsLecture = [false, false, false, false]
     
@@ -154,10 +153,11 @@ class AllTimetableStruct{
 
 }
 
-class TodayLessonsViewController: UIViewController{
+class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
     
    
-
+    @IBOutlet weak var TodayTimetableTableView: UITableView!
     @IBOutlet weak var FirstLessonLabel: UILabel!
     @IBOutlet weak var TypeOfFirstLesson: UILabel!
     @IBOutlet weak var StartTimeOfFirstLesson: UILabel!
@@ -178,14 +178,15 @@ class TodayLessonsViewController: UIViewController{
     @IBOutlet weak var StartTimeOfFourthLesson: UILabel!
     @IBOutlet weak var EndTimeOfFourthLesson: UILabel!
     @IBOutlet weak var CabOfFourthLesson: UILabel!
-    
-
     @IBOutlet weak var DayCountWeekTodayLabel: UILabel!
     @IBOutlet weak var WeekdayLabel: UILabel!
     
+    let numberOfWeek = Calendar.current.component(.weekday, from: Date()) + 1
+    let allTimetable = AllTimetableStruct().take(day: Calendar.current.component(.weekday, from: Date()) + 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        TodayTimetableTableView.dataSource = self
 //        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
 //        backgroundImage.image = UIImage(named: "photo-1579546929518-9e396f3cc809")
 //        backgroundImage.contentMode = .scaleAspectFill
@@ -239,6 +240,35 @@ class TodayLessonsViewController: UIViewController{
         }
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return allTimetable.0.endIndex
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.5
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+           let headerView = UIView()
+           headerView.backgroundColor = UIColor.clear
+           return headerView
+       }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = TodayTimetableTableView.dequeueReusableCell(withIdentifier: "Lesson", for: indexPath) as! LessonTableViewCell
+        cell.StartTimeLabel.text = allTimetable.1[indexPath.section].components(separatedBy: "-")[0]
+        cell.EndTimeLabel.text = allTimetable.1[indexPath.section].components(separatedBy: "-")[1]
+        cell.LesssonLabel.text = allTimetable.0[indexPath.section]
+        cell.DescriptionLessonLabel.text = allTimetable.2[indexPath.section]
+        cell.backgroundColor = allTimetable.3[indexPath.section] ? UIColor(red: 0xFF, green: 0xB7, blue: 0x03) : UIColor(red: 0x8E, green: 0xCA, blue: 0xE6)
+        cell.layer.cornerRadius = 10
+        return cell
+    }
+    
 //    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
 //        guard let destinationVC = seque.destination as? EditTimetableViewController else { return }
 //        allTimetable = destinationVC.alltimetable
@@ -247,7 +277,7 @@ class TodayLessonsViewController: UIViewController{
     
     }
 
-extension Calendar{
+public extension Calendar{
     func WeekdayName(of numberWeekDay: Int) -> String{
         switch numberWeekDay{
         case 1:
