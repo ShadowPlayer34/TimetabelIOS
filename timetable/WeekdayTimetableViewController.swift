@@ -8,7 +8,7 @@
 import UIKit
 
 class WeekdayTimetableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+
     @IBOutlet weak var LessonsTableView: UITableView!
     var weekdayChoised = 0
 
@@ -17,6 +17,8 @@ class WeekdayTimetableViewController: UIViewController, UITableViewDelegate, UIT
         LessonsTableView.delegate = self
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+
+      
     }
     
      func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,7 +50,6 @@ class WeekdayTimetableViewController: UIViewController, UITableViewDelegate, UIT
         cell.layer.cornerRadius = 10
         return cell
     }
-
 
 
 }

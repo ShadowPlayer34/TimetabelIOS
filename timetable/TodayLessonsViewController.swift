@@ -154,55 +154,24 @@ class AllTimetableStruct{
 }
 
 class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-    
-    
    
     @IBOutlet weak var TodayTimetableTableView: UITableView!
-    @IBOutlet weak var FirstLessonLabel: UILabel!
-    @IBOutlet weak var TypeOfFirstLesson: UILabel!
-    @IBOutlet weak var StartTimeOfFirstLesson: UILabel!
-    @IBOutlet weak var EndTimeOfFirstLesson: UILabel!
-    @IBOutlet weak var CabOfFirstLesson: UILabel!
-    @IBOutlet weak var SecondLessonLabel: UILabel!
-    @IBOutlet weak var TypeOfSecondLesson: UILabel!
-    @IBOutlet weak var StartTimeOfSecondLesson: UILabel!
-    @IBOutlet weak var EndtTimeOfSecondLesson: UILabel!
-    @IBOutlet weak var CabForSecondLesson: UILabel!
-    @IBOutlet weak var ThirdLessonLabel: UILabel!
-    @IBOutlet weak var TypeOfThirdLesson: UILabel!
-    @IBOutlet weak var StartTimeOfThirdLesson: UILabel!
-    @IBOutlet weak var EndTimeOfThirdLesson: UILabel!
-    @IBOutlet weak var CabOfThirdLesson: UILabel!
-    @IBOutlet weak var FourthLessonLabel: UILabel!
-    @IBOutlet weak var TypeOfFourthLesson: UILabel!
-    @IBOutlet weak var StartTimeOfFourthLesson: UILabel!
-    @IBOutlet weak var EndTimeOfFourthLesson: UILabel!
-    @IBOutlet weak var CabOfFourthLesson: UILabel!
     @IBOutlet weak var DayCountWeekTodayLabel: UILabel!
     @IBOutlet weak var WeekdayLabel: UILabel!
     
-    let numberOfWeek = Calendar.current.component(.weekday, from: Date()) + 1
-    let allTimetable = AllTimetableStruct().take(day: Calendar.current.component(.weekday, from: Date()) + 1)
+    let numberOfWeek = Calendar.current.component(.weekday, from: Date())
+    let allTimetable = AllTimetableStruct().take(day: Calendar.current.component(.weekday, from: Date()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         TodayTimetableTableView.dataSource = self
+        TodayTimetableTableView.delegate = self
 //        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
 //        backgroundImage.image = UIImage(named: "photo-1579546929518-9e396f3cc809")
 //        backgroundImage.contentMode = .scaleAspectFill
 //        view.insertSubview(backgroundImage, at: 0)
         
-        TypeOfFirstLesson.backgroundColor = .orange
-        TypeOfFirstLesson.layer.cornerRadius = 7
-        TypeOfFirstLesson.layer.masksToBounds = true // разобраться с тенью
-        TypeOfFirstLesson.layer.shadowOffset = CGSize(width: 3, height: 3)
-        TypeOfFirstLesson.layer.shadowOpacity = 0.8
-        TypeOfFirstLesson.layer.shadowRadius = 7
-        TypeOfFirstLesson.layer.shadowColor = CGColor.init(srgbRed: 1, green: 0, blue: 0, alpha: 1)
-        let numberOfWeek = Calendar.current.component(.weekday, from: Date())
         WeekdayLabel.text = Calendar.current.WeekdayName(of: numberOfWeek)
-//        WeekdayLabel.layer.shadowOpacity = 0.08
-        let todayTimetable = AllTimetableStruct().take(day: numberOfWeek)
         let date = Date()
         let format = "dd MMMM"
         let dateFormatter = DateFormatter()
@@ -210,34 +179,6 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
 
         let str = dateFormatter.string(from: date)
         DayCountWeekTodayLabel.text = "\(str) • \(AllTimetableStruct().take(day: numberOfWeek).0.endIndex) пары • \(AllTimetableStruct().typeOfWeek) неделя"
-        
-        FirstLessonLabel.text = todayTimetable.0[0]
-        StartTimeOfFirstLesson.text = todayTimetable.1[0].components(separatedBy: "-")[0]
-        EndTimeOfFirstLesson.text = todayTimetable.1[0].components(separatedBy: "-")[1]
-        CabOfFirstLesson.text = todayTimetable.2[0]
-        TypeOfFirstLesson.text = todayTimetable.3[0] ? "Лекция" : "Практика"
-        
-        SecondLessonLabel.text = todayTimetable.0[1]
-        StartTimeOfSecondLesson.text = todayTimetable.1[1].components(separatedBy: "-")[0]
-        EndtTimeOfSecondLesson.text = todayTimetable.1[1].components(separatedBy: "-")[1]
-        CabForSecondLesson.text = todayTimetable.2[1]
-        TypeOfSecondLesson.text = todayTimetable.3[1] ? "Лекция" : "Практика"
-        
-        if todayTimetable.0.indices.contains(2){
-            ThirdLessonLabel.text = todayTimetable.0[2]
-            StartTimeOfThirdLesson.text = todayTimetable.1[2].components(separatedBy: "-")[0]
-            EndTimeOfThirdLesson.text = todayTimetable.1[2].components(separatedBy: "-")[1]
-            CabOfThirdLesson.text = todayTimetable.2[2]
-            TypeOfThirdLesson.text = todayTimetable.3[2] ? "Лекция" : "Практика"
-        }
-        
-        if todayTimetable.0.indices.contains(3){
-            FourthLessonLabel.text = todayTimetable.0[3]
-            StartTimeOfFourthLesson.text = todayTimetable.1[3].components(separatedBy: "-")[0]
-            EndTimeOfFourthLesson.text = todayTimetable.1[3].components(separatedBy: "-")[1]
-            CabOfFourthLesson.text = todayTimetable.2[3]
-            TypeOfFourthLesson.text = todayTimetable.3[3] ? "Лекция" : "Практика"
-        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -248,15 +189,15 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         return 1
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.5
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
            let headerView = UIView()
            headerView.backgroundColor = UIColor.clear
            return headerView
-       }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.5
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = TodayTimetableTableView.dequeueReusableCell(withIdentifier: "Lesson", for: indexPath) as! LessonTableViewCell
@@ -269,13 +210,7 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
-//    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
-//        guard let destinationVC = seque.destination as? EditTimetableViewController else { return }
-//        allTimetable = destinationVC.alltimetable
-//    }
-
-    
-    }
+}
 
 public extension Calendar{
     func WeekdayName(of numberWeekDay: Int) -> String{

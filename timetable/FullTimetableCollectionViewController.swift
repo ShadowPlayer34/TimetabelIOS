@@ -42,18 +42,4 @@ class FullTimetableCollectionViewController: UICollectionViewController {
             }
         }
     }
-
-    // MARK: UICollectionViewDataSource
-
-    
- 
-
-
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-
-    
-
 }

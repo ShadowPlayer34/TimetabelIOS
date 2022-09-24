@@ -17,10 +17,12 @@ class NextLessonViewController: UIViewController {
     @IBOutlet weak var StartTimeOfNextLesson: UILabel!
     @IBOutlet weak var EndTimeOfNextLesson: UILabel!
     @IBOutlet weak var CabOfNextLessson: UILabel!
-
+    @IBOutlet weak var NextLessonStack: UIStackView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NextLessonStack.layer.cornerRadius = 10
         (NextLessonLabel.text, StartTimeOfNextLesson.text, EndTimeOfNextLesson.text, CabOfNextLessson.text) = nextLesson()
     }
     
@@ -40,21 +42,25 @@ class NextLessonViewController: UIViewController {
         let todayTimetable = timetable.take(day: dateToday) //получение нужного дня
         switch timeNowInt{
         case 1000...1209:
+            NextLessonStack.backgroundColor = todayTimetable.3[0] ? UIColor(red: 0xFF, green: 0xB7, blue: 0x03) : UIColor(red: 0x8E, green: 0xCA, blue: 0xE6)
             return (todayTimetable.0[0],
             todayTimetable.1[0].components(separatedBy: "-")[0],
             todayTimetable.1[0].components(separatedBy: "-")[1],
             todayTimetable.2[0])
         case 1210...1359:
+            NextLessonStack.backgroundColor = todayTimetable.3[1] ? UIColor(red: 0xFF, green: 0xB7, blue: 0x03) : UIColor(red: 0x8E, green: 0xCA, blue: 0xE6)
             return (todayTimetable.0[1],
             todayTimetable.1[1].components(separatedBy: "-")[0],
             todayTimetable.1[1].components(separatedBy: "-")[1],
             todayTimetable.2[1])
         case 1400...1529:
+            NextLessonStack.backgroundColor = todayTimetable.3[2] ? UIColor(red: 0xFF, green: 0xB7, blue: 0x03) : UIColor(red: 0x8E, green: 0xCA, blue: 0xE6)
             return (todayTimetable.0[2],
             todayTimetable.1[2].components(separatedBy: "-")[0],
             todayTimetable.1[2].components(separatedBy: "-")[1],
             todayTimetable.2[2])
         case 1530...1659:
+            NextLessonStack.backgroundColor = todayTimetable.3[3] ? UIColor(red: 0xFF, green: 0xB7, blue: 0x03) : UIColor(red: 0x8E, green: 0xCA, blue: 0xE6)
             if todayTimetable.0.indices.contains(3){
                 return (todayTimetable.0[3],
                 todayTimetable.1[3].components(separatedBy: "-")[0],
