@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C622B3828E82C9700F05A9B /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C622B3728E82C9700F05A9B /* PresentationViewController.swift */; };
+		3C622B3A28E8458200F05A9B /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C622B3928E8458200F05A9B /* StartupViewController.swift */; };
+		3C622B3C28E8BC5C00F05A9B /* ManageTimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C622B3B28E8BC5C00F05A9B /* ManageTimetableTableViewCell.swift */; };
+		3C6390E028F991CB00CFEB09 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6390DF28F991CB00CFEB09 /* TimeTable.swift */; };
 		3C6F7CCD28DBC33C004F515F /* WeekdayTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6F7CCC28DBC33C004F515F /* WeekdayTimetableViewController.swift */; };
 		3C7D6DFF28D8A47000FA1748 /* LessonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7D6DFE28D8A47000FA1748 /* LessonTableViewCell.swift */; };
 		3C84BD9A28C1286F00FA2431 /* TomorrowTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */; };
@@ -18,11 +22,21 @@
 		3CB2A39F28BD60D2006803E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB2A39D28BD60D2006803E1 /* LaunchScreen.storyboard */; };
 		3CB2A3A728BD6462006803E1 /* NextLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */; };
 		3CB2A3A928BD6491006803E1 /* TodayLessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */; };
+		3CB4467028FC7551002DB8DF /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4466F28FC7551002DB8DF /* Functions.swift */; };
+		3CB4467928FDDF6C002DB8DF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4467828FDDF6C002DB8DF /* SettingsViewController.swift */; };
+		3CB4467B28FDE4C6002DB8DF /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4467A28FDE4C6002DB8DF /* MusicTableViewCell.swift */; };
+		3CB4468128FF422A002DB8DF /* Ambient.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4468028FF422A002DB8DF /* Ambient.mp3 */; };
+		3CB4468328FF4345002DB8DF /* Lofi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4468228FF4345002DB8DF /* Lofi.mp3 */; };
+		3CB4468528FF4356002DB8DF /* Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4468428FF4356002DB8DF /* Piano.mp3 */; };
 		3CDAA3F728DB97A1001B7D24 /* WeekdayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA3F628DB97A1001B7D24 /* WeekdayCollectionViewCell.swift */; };
 		3CDAA3FD28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAA3FC28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C622B3728E82C9700F05A9B /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
+		3C622B3928E8458200F05A9B /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
+		3C622B3B28E8BC5C00F05A9B /* ManageTimetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTimetableTableViewCell.swift; sourceTree = "<group>"; };
+		3C6390DF28F991CB00CFEB09 /* TimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 		3C6F7CCC28DBC33C004F515F /* WeekdayTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayTimetableViewController.swift; sourceTree = "<group>"; };
 		3C7D6DFE28D8A47000FA1748 /* LessonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewCell.swift; sourceTree = "<group>"; };
 		3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowTimetableViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +50,12 @@
 		3CB2A3A028BD60D2006803E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLessonViewController.swift; sourceTree = "<group>"; };
 		3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLessonsViewController.swift; sourceTree = "<group>"; };
+		3CB4466F28FC7551002DB8DF /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		3CB4467828FDDF6C002DB8DF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3CB4467A28FDE4C6002DB8DF /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		3CB4468028FF422A002DB8DF /* Ambient.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ambient.mp3; sourceTree = "<group>"; };
+		3CB4468228FF4345002DB8DF /* Lofi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lofi.mp3; sourceTree = "<group>"; };
+		3CB4468428FF4356002DB8DF /* Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Piano.mp3; sourceTree = "<group>"; };
 		3CDAA3F628DB97A1001B7D24 /* WeekdayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayCollectionViewCell.swift; sourceTree = "<group>"; };
 		3CDAA3FC28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTimetableCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +71,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C6390C928F8349400CFEB09 /* Once Call Instruction */ = {
+			isa = PBXGroup;
+			children = (
+				3C622B3728E82C9700F05A9B /* PresentationViewController.swift */,
+				3C622B3928E8458200F05A9B /* StartupViewController.swift */,
+			);
+			path = "Once Call Instruction";
+			sourceTree = "<group>";
+		};
+		3C6390CA28F834E600CFEB09 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */,
+				3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */,
+				3CDAA3FC28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift */,
+				3C6F7CCC28DBC33C004F515F /* WeekdayTimetableViewController.swift */,
+			);
+			path = Timetable;
+			sourceTree = "<group>";
+		};
+		3C6390CB28F8350C00CFEB09 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3CB4466F28FC7551002DB8DF /* Functions.swift */,
+				3C6390DF28F991CB00CFEB09 /* TimeTable.swift */,
+				3C7D6DFE28D8A47000FA1748 /* LessonTableViewCell.swift */,
+				3CDAA3F628DB97A1001B7D24 /* WeekdayCollectionViewCell.swift */,
+				3CB4467A28FDE4C6002DB8DF /* MusicTableViewCell.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		3CB2A38628BD60CE006803E1 = {
 			isa = PBXGroup;
 			children = (
@@ -73,19 +125,37 @@
 				3CB2A39228BD60CE006803E1 /* AppDelegate.swift */,
 				3CB2A39428BD60CE006803E1 /* SceneDelegate.swift */,
 				3CB2A39628BD60CE006803E1 /* FirstViewController.swift */,
-				3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */,
-				3CB2A3A828BD6491006803E1 /* TodayLessonsViewController.swift */,
-				3C84BD9928C1286F00FA2431 /* TomorrowTimetableViewController.swift */,
-				3CDAA3FC28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift */,
-				3C7D6DFE28D8A47000FA1748 /* LessonTableViewCell.swift */,
-				3CDAA3F628DB97A1001B7D24 /* WeekdayCollectionViewCell.swift */,
-				3C6F7CCC28DBC33C004F515F /* WeekdayTimetableViewController.swift */,
+				3C622B3B28E8BC5C00F05A9B /* ManageTimetableTableViewCell.swift */,
+				3CB4467828FDDF6C002DB8DF /* SettingsViewController.swift */,
+				3C6390CA28F834E600CFEB09 /* Timetable */,
+				3C6390C928F8349400CFEB09 /* Once Call Instruction */,
+				3C6390CB28F8350C00CFEB09 /* Helpers */,
+				3CB4467728FDDE27002DB8DF /* music */,
+				3CF0F922291573E4000A0FE7 /* delete later */,
 				3CB2A39828BD60CE006803E1 /* Main.storyboard */,
 				3CB2A39B28BD60D2006803E1 /* Assets.xcassets */,
 				3CB2A39D28BD60D2006803E1 /* LaunchScreen.storyboard */,
 				3CB2A3A028BD60D2006803E1 /* Info.plist */,
 			);
 			path = timetable;
+			sourceTree = "<group>";
+		};
+		3CB4467728FDDE27002DB8DF /* music */ = {
+			isa = PBXGroup;
+			children = (
+				3CB4468028FF422A002DB8DF /* Ambient.mp3 */,
+				3CB4468228FF4345002DB8DF /* Lofi.mp3 */,
+				3CB4468428FF4356002DB8DF /* Piano.mp3 */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
+		3CF0F922291573E4000A0FE7 /* delete later */ = {
+			isa = PBXGroup;
+			children = (
+				3CB2A3A628BD6462006803E1 /* NextLessonViewController.swift */,
+			);
+			path = "delete later";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +216,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB4468128FF422A002DB8DF /* Ambient.mp3 in Resources */,
+				3CB4468328FF4345002DB8DF /* Lofi.mp3 in Resources */,
+				3CB4468528FF4356002DB8DF /* Piano.mp3 in Resources */,
 				3CB2A39F28BD60D2006803E1 /* LaunchScreen.storyboard in Resources */,
 				3CB2A39C28BD60D2006803E1 /* Assets.xcassets in Resources */,
 				3CB2A39A28BD60CE006803E1 /* Main.storyboard in Resources */,
@@ -160,14 +233,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB2A39728BD60CE006803E1 /* FirstViewController.swift in Sources */,
+				3C6390E028F991CB00CFEB09 /* TimeTable.swift in Sources */,
 				3CB2A39328BD60CE006803E1 /* AppDelegate.swift in Sources */,
+				3C622B3A28E8458200F05A9B /* StartupViewController.swift in Sources */,
 				3CDAA3FD28DBA5D9001B7D24 /* FullTimetableCollectionViewController.swift in Sources */,
+				3C622B3828E82C9700F05A9B /* PresentationViewController.swift in Sources */,
 				3CB2A3A928BD6491006803E1 /* TodayLessonsViewController.swift in Sources */,
+				3CB4467928FDDF6C002DB8DF /* SettingsViewController.swift in Sources */,
 				3C6F7CCD28DBC33C004F515F /* WeekdayTimetableViewController.swift in Sources */,
+				3CB4467028FC7551002DB8DF /* Functions.swift in Sources */,
+				3C622B3C28E8BC5C00F05A9B /* ManageTimetableTableViewCell.swift in Sources */,
 				3C7D6DFF28D8A47000FA1748 /* LessonTableViewCell.swift in Sources */,
 				3CB2A39528BD60CE006803E1 /* SceneDelegate.swift in Sources */,
 				3CDAA3F728DB97A1001B7D24 /* WeekdayCollectionViewCell.swift in Sources */,
 				3C84BD9A28C1286F00FA2431 /* TomorrowTimetableViewController.swift in Sources */,
+				3CB4467B28FDE4C6002DB8DF /* MusicTableViewCell.swift in Sources */,
 				3CB2A3A728BD6462006803E1 /* NextLessonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

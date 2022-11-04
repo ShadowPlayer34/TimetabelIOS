@@ -11,10 +11,9 @@ private let reuseIdentifier = "Weekday"
 
 class FullTimetableCollectionViewController: UICollectionViewController {
 
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -24,14 +23,13 @@ class FullTimetableCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! WeekdayCollectionViewCell
         
-        
         cell.WeekdayLabel.text = Calendar.current.WeekdayName(of: indexPath.item + 2)
         cell.backgroundColor = .red
         cell.layer.cornerRadius = 10
         cell.backgroundColor = UIColor(red: 0xB8, green: 0xC0, blue: 0xFF)
         return cell
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "ShowDetailsFullTimetable"{
             if let cell = sender as? UICollectionViewCell{

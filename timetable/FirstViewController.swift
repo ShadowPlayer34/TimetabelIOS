@@ -6,26 +6,49 @@
 //
 
 import UIKit
-
+import AVFoundation
 
 class FirstViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-//        backgroundImage.image = UIImage(named: "photo-1579546929518-9e396f3cc809")
-//        backgroundImage.contentMode = .scaleAspectFill
-//        view.insertSubview(backgroundImage, at: 0)
-        // Do any additional setup after loading the view.
+         timetable.typeOfWeekFunc()
+        playMusic()
     }
-//    var alltimetable = AllTimetableStruct()
-//    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
-//        guard let destinationVC = seque.destination as? TodayLessonsViewController else { return }
-//        alltimetable = destinationVC.allTimetable
-//    }
     
-    @IBAction func unwindSegueToTheFirstVC(segue: UIStoryboardSegue){
-        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        showPresentation()
+    }
+    
+    @IBAction func returnTutorialTapped(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "tutorial")
+    }
+    
+    //функция для запуска обучалки
+    func showPresentation() {
+        if UserDefaults.standard.bool(forKey: "tutorial") == false{
+            if let presentationVC = storyboard?.instantiateViewController(withIdentifier: "startup") as? StartupViewController{
+                present(presentationVC, animated: true, completion: nil)
+        }
+        }
+    }
+    
+    //функция для воспроизведения фоновой музыки
+    func playMusic() {
+        let musicBool = UserDefaults.standard.bool(forKey: "musicBool")
+        print(musicBool)
+        if musicBool == true {
+            let music = UserDefaults.standard.string(forKey: "music")
+            
+            guard let music = music else {
+                return
+            }
+
+            print(music)
+            startMusic(pathForMusic: music, volume: {player.volume = UserDefaults.standard.float(forKey: "musicVolume")})
+        }
     }
 }
 

@@ -10,6 +10,7 @@ import UIKit
 class LessonTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var typeOfLessonView: UIView!
     @IBOutlet weak var LesssonLabel: UILabel!
     @IBOutlet weak var DescriptionLessonLabel: UILabel!
     @IBOutlet weak var StartTimeLabel: UILabel!

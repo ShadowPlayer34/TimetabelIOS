@@ -4,14 +4,14 @@
 //
 //  Created by Андрей Худик on 1.09.22.
 //
-
+//TODO: переписать все распиание под переменную
 import UIKit
 
 class TomorrowTimetableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
-    
+
     let numberOfWeek = Calendar.current.component(.weekday, from: Date()) + 1
-    let allTimetable = AllTimetableStruct().take(day: Calendar.current.component(.weekday, from: Date()) + 1)
+    let allTimetable = timetable.take(day: Calendar.current.component(.weekday, from: Date()) + 1)
 
     @IBOutlet weak var LessonsTableView: UITableView!
     @IBOutlet weak var DayCountWeekTomorrowLabel: UILabel!
@@ -30,7 +30,8 @@ class TomorrowTimetableViewController: UIViewController, UITableViewDataSource, 
         let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: date)
         let str = dateFormatter.string(from: tomorrow!)
         WeekdayTomorrowLabel.text = Calendar.current.WeekdayName(of: numberOfWeek)
-        DayCountWeekTomorrowLabel.text = "\(str) • \(allTimetable.0.endIndex) пары • \(AllTimetableStruct().typeOfWeek) неделя"
+        DayCountWeekTomorrowLabel.text = "\(str) • \(allTimetable.0.endIndex) пары • \(timetable.typeOfWeek) неделя"
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -53,15 +54,18 @@ class TomorrowTimetableViewController: UIViewController, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = LessonsTableView.dequeueReusableCell(withIdentifier: "Lesson", for: indexPath) as! LessonTableViewCell
+        guard numberOfWeek != 8 else { // доделать
+            cell.LesssonLabel.text = "Спать"
+            return cell }
         cell.StartTimeLabel.text = allTimetable.1[indexPath.section].components(separatedBy: "-")[0]
         cell.EndTimeLabel.text = allTimetable.1[indexPath.section].components(separatedBy: "-")[1]
         cell.LesssonLabel.text = allTimetable.0[indexPath.section]
         cell.DescriptionLessonLabel.text = allTimetable.2[indexPath.section]
-        cell.backgroundColor = allTimetable.3[indexPath.section] ? UIColor(red: 0xFF, green: 0xB7, blue: 0x03) : UIColor(red: 0x8E, green: 0xCA, blue: 0xE6)
+        cell.typeOfLessonView.backgroundColor = allTimetable.3[indexPath.section] ? UIColor(red: 0xFF, green: 0xB7, blue: 0x03) : UIColor(red: 0x8E, green: 0xCA, blue: 0xE6)
+        cell.typeOfLessonView.layer.cornerRadius = 4
         cell.layer.cornerRadius = 10
         return cell
     }
-     
     
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        return 50.0
