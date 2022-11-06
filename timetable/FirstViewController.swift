@@ -21,7 +21,7 @@ class FirstViewController: UIViewController {
 
         showPresentation()
     }
-    
+    //MARK: - Functions
     @IBAction func returnTutorialTapped(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "tutorial")
     }

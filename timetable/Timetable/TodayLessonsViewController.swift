@@ -8,13 +8,16 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
     var nowLesson = 0
     
     let numberOfWeek = Calendar.current.component(.weekday, from: Date())
-    
-    
+        
     var allTimetable = timetable.take(day: Calendar.current.component(.weekday, from: Date()))
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        timetable.typeOfWeekFunc()
+        playMusic()
+        
         let data = UserDefaults.standard.object(forKey: "TimeTable") as! Data
         let decoded = try! JSONDecoder().decode(AllTimetableClass.self, from: data)
         allTimetable = decoded.take(day: Calendar.current.component(.weekday, from: Date()))
@@ -25,9 +28,8 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         let format = "dd MMMM"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
-//
-//
-//
+
+        
         let str = dateFormatter.string(from: date)
         let locale = Locale(identifier: "ru_RU")
         dateFormatter.locale = locale
@@ -40,7 +42,7 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
       
         DayCountWeekTodayLabel.text = "\(str) • \(AllTimetableClass().take(day: numberOfWeek).0.endIndex) пары • \(timetable.typeOfWeek) неделя"
         
-        
+        //подбор следующей пары
         switch timeNowInt{
         case 1000...1209:
             if allTimetable.0.indices.contains(0){
@@ -69,6 +71,37 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        showPresentation()
+    }
+    
+    //функция для запуска обучалки
+    func showPresentation() {
+        if UserDefaults.standard.bool(forKey: "tutorial") == false{
+            if let presentationVC = storyboard?.instantiateViewController(withIdentifier: "startup") as? StartupViewController{
+                present(presentationVC, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    //функция для воспроизведения фоновой музыки
+    func playMusic() {
+        let musicBool = UserDefaults.standard.bool(forKey: "musicBool")
+        print(musicBool)
+        if musicBool == true {
+            let music = UserDefaults.standard.string(forKey: "music")
+            
+            guard let music = music else {
+                return
+            }
+
+            print(music)
+            startMusic(pathForMusic: music, volume: {player.volume = UserDefaults.standard.float(forKey: "musicVolume")})
+        }
+    }
+    //------------
     func numberOfSections(in tableView: UITableView) -> Int {
         return allTimetable.0.endIndex
     }
@@ -94,6 +127,7 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         allTimetable = decoded.take(day: Calendar.current.component(.weekday, from: Date()))
         
         let cell = TodayTimetableTableView.dequeueReusableCell(withIdentifier: "Lesson", for: indexPath) as! LessonTableViewCell
+        if Calendar.current.component(.weekday, from: Date()) != 1 {
         cell.StartTimeLabel.text = allTimetable.1[indexPath.section].components(separatedBy: "-")[0]
         cell.EndTimeLabel.text = allTimetable.1[indexPath.section].components(separatedBy: "-")[1]
         cell.LesssonLabel.text = allTimetable.0[indexPath.section]
@@ -105,7 +139,9 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         }
         cell.typeOfLessonView.layer.cornerRadius = 4
         cell.layer.cornerRadius = 10
-        
+        }else {
+            
+        }
         return cell
     }
 }

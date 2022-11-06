@@ -23,18 +23,23 @@ class SettingsViewController: UIViewController {
         musicTableView.delegate = self
         musicTableView.dataSource = self
         customButton(button: stopMusicButton)
-        //настройка слайдера
+        
+        createSlider()
+
+    }
+    
+    //настройка слайдера
+    func createSlider() {
         volumeSlider.minimumValue = 0
         volumeSlider.maximumValue = 1
         volumeSlider.value = UserDefaults.standard.float(forKey: "musicVolume")
         volumeSlider.addTarget(self, action: #selector(changeVolume(sender:)), for: .valueChanged)
-
     }
-    
+    //MARK: - gesture for present developer settings
     func secretGesture() {
             let tenthTap = UITapGestureRecognizer(target: self, action: #selector(tenthTapMethod))
             tenthTap.numberOfTapsRequired = 10
-            tabBarController?.tabBar.addGestureRecognizer(tenthTap)
+            view.addGestureRecognizer(tenthTap)
     }
     
     @objc func tenthTapMethod() {
@@ -42,14 +47,14 @@ class SettingsViewController: UIViewController {
             present(controller, animated: true, completion: nil)
         }
     }
-    
+    //изменение громкости фоновой музыки
     @objc func changeVolume(sender: UISlider) {
         if sender == volumeSlider {
             player.volume = sender.value
         }
         UserDefaults.standard.set(sender.value, forKey: "musicVolume")
     }
-    
+    //остановка фоновой музыки
     @IBAction func stopMusicTapped(_ sender: Any) {
         player.stop()
         UserDefaults.standard.set(false, forKey: "musicBool")
