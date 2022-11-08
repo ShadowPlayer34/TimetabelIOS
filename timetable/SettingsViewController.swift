@@ -47,6 +47,7 @@ class SettingsViewController: UIViewController {
             present(controller, animated: true, completion: nil)
         }
     }
+    //MARK: - some settings for background music
     //изменение громкости фоновой музыки
     @objc func changeVolume(sender: UISlider) {
         if sender == volumeSlider {

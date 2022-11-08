@@ -22,7 +22,7 @@ class TomorrowTimetableViewController: UIViewController, UITableViewDataSource, 
         LessonsTableView.delegate = self
         super.viewDidLoad()
     
-        
+        timetable.typeOfWeekFunc()
         let date = Date()
         let format = "dd MMMM"
         let dateFormatter = DateFormatter()

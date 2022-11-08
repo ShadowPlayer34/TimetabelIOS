@@ -1,29 +1,52 @@
 import UIKit
-//TODO: переписать все распиание под переменную
+
 class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    //MARK: - variables
     @IBOutlet weak var TodayTimetableTableView: UITableView!
     @IBOutlet weak var DayCountWeekTodayLabel: UILabel!
     @IBOutlet weak var WeekdayLabel: UILabel!
-    
     var nowLesson = 0
-    
     let numberOfWeek = Calendar.current.component(.weekday, from: Date())
-        
     var allTimetable = timetable.take(day: Calendar.current.component(.weekday, from: Date()))
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        showPresentation()
         timetable.typeOfWeekFunc()
         playMusic()
-        
+        if UserDefaults.standard.bool(forKey: "tutorial") == true {
         let data = UserDefaults.standard.object(forKey: "TimeTable") as! Data
         let decoded = try! JSONDecoder().decode(AllTimetableClass.self, from: data)
         allTimetable = decoded.take(day: Calendar.current.component(.weekday, from: Date()))
         TodayTimetableTableView.dataSource = self
         TodayTimetableTableView.delegate = self
         WeekdayLabel.text = Calendar.current.WeekdayName(of: numberOfWeek)
+        nextLesson()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        showPresentation()
+        
+        timetable.typeOfWeekFunc()
+        playMusic()
+        if UserDefaults.standard.bool(forKey: "tutorial") == true {
+        let data = UserDefaults.standard.object(forKey: "TimeTable") as! Data
+        let decoded = try! JSONDecoder().decode(AllTimetableClass.self, from: data)
+        allTimetable = decoded.take(day: Calendar.current.component(.weekday, from: Date()))
+        TodayTimetableTableView.dataSource = self
+        TodayTimetableTableView.delegate = self
+        WeekdayLabel.text = Calendar.current.WeekdayName(of: numberOfWeek)
+        nextLesson()
+        }
+    }
+    
+    //нахождение следующей пары и форматирование лейбла с данными о сегодняшнем дне
+    func nextLesson() {
         let date = Date()
         let format = "dd MMMM"
         let dateFormatter = DateFormatter()
@@ -39,7 +62,7 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         let timeNow = time.components(separatedBy: ":")
         let timeNowInt = Int(timeNow[0] + timeNow[1])!
         
-      
+        //форматирование лейбла о сегодняшнем дне
         DayCountWeekTodayLabel.text = "\(str) • \(AllTimetableClass().take(day: numberOfWeek).0.endIndex) пары • \(timetable.typeOfWeek) неделя"
         
         //подбор следующей пары
@@ -71,13 +94,7 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        showPresentation()
-    }
-    
-    //функция для запуска обучалки
+    //запуск обучалки
     func showPresentation() {
         if UserDefaults.standard.bool(forKey: "tutorial") == false{
             if let presentationVC = storyboard?.instantiateViewController(withIdentifier: "startup") as? StartupViewController{
@@ -86,10 +103,9 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
-    //функция для воспроизведения фоновой музыки
+    //воспроизведение фоновой музыки
     func playMusic() {
         let musicBool = UserDefaults.standard.bool(forKey: "musicBool")
-        print(musicBool)
         if musicBool == true {
             let music = UserDefaults.standard.string(forKey: "music")
             
@@ -97,11 +113,11 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
                 return
             }
 
-            print(music)
             startMusic(pathForMusic: music, volume: {player.volume = UserDefaults.standard.float(forKey: "musicVolume")})
         }
     }
-    //------------
+    
+    //MARK: - настройка таблицы
     func numberOfSections(in tableView: UITableView) -> Int {
         return allTimetable.0.endIndex
     }
@@ -125,9 +141,9 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         let data = UserDefaults.standard.object(forKey: "TimeTable") as! Data
         let decoded = try! JSONDecoder().decode(AllTimetableClass.self, from: data)
         allTimetable = decoded.take(day: Calendar.current.component(.weekday, from: Date()))
-        
+        //настройка ячейек
         let cell = TodayTimetableTableView.dequeueReusableCell(withIdentifier: "Lesson", for: indexPath) as! LessonTableViewCell
-        if Calendar.current.component(.weekday, from: Date()) != 1 {
+       
         cell.StartTimeLabel.text = allTimetable.1[indexPath.section].components(separatedBy: "-")[0]
         cell.EndTimeLabel.text = allTimetable.1[indexPath.section].components(separatedBy: "-")[1]
         cell.LesssonLabel.text = allTimetable.0[indexPath.section]
@@ -139,9 +155,7 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         }
         cell.typeOfLessonView.layer.cornerRadius = 4
         cell.layer.cornerRadius = 10
-        }else {
-            
-        }
+       
         return cell
     }
 }
