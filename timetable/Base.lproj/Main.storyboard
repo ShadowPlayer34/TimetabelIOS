@@ -515,6 +515,7 @@
                         <outlet property="DayCountWeekTodayLabel" destination="PTm-Ec-vx5" id="fYO-VY-u69"/>
                         <outlet property="TodayTimetableTableView" destination="K1a-iP-r7l" id="q9a-tG-6ax"/>
                         <outlet property="WeekdayLabel" destination="qQp-yS-P3P" id="xJJ-WU-tNv"/>
+                        <outlet property="navBar" destination="B7R-Vo-Exe" id="NxV-7e-JAi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5I-LX-jXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -969,16 +970,38 @@
                                             <action selector="stopMusicTapped:" destination="BOC-ya-b6h" eventType="touchUpInside" id="n7G-Sm-iDe"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCS-Ct-WiW">
+                                        <rect key="frame" x="8" y="319" width="204" height="31"/>
+                                        <color key="backgroundColor" red="0.76658685090000001" green="0.69890960120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="1Qg-va-pcp"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="204" id="aIb-ip-ued"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=" Редактировать"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="stopMusicTapped:" destination="BOC-ya-b6h" eventType="touchUpInside" id="uRp-XU-ey4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="UGs-ZC-AJX" firstAttribute="leading" secondItem="7Gg-iR-C0w" secondAttribute="leading" constant="16" id="0dF-J5-cNq"/>
                                     <constraint firstItem="cHY-Zj-i7C" firstAttribute="leading" secondItem="7Gg-iR-C0w" secondAttribute="leading" constant="16" id="1ds-S8-ldf"/>
+                                    <constraint firstItem="dCS-Ct-WiW" firstAttribute="leading" secondItem="7Gg-iR-C0w" secondAttribute="leading" constant="8" id="5u8-6P-uQG"/>
                                     <constraint firstItem="7Gg-iR-C0w" firstAttribute="trailing" secondItem="UGs-ZC-AJX" secondAttribute="trailing" constant="108" id="9BY-Zh-v57"/>
                                     <constraint firstItem="7Gg-iR-C0w" firstAttribute="trailing" secondItem="H5h-CX-J1v" secondAttribute="trailing" constant="215" id="9hq-Ra-Pek"/>
                                     <constraint firstItem="cHY-Zj-i7C" firstAttribute="top" secondItem="H5h-CX-J1v" secondAttribute="bottom" constant="8" id="AJp-MT-tSC"/>
+                                    <constraint firstItem="dCS-Ct-WiW" firstAttribute="top" secondItem="V8q-n4-UMZ" secondAttribute="bottom" constant="22" id="BpF-Il-8an"/>
                                     <constraint firstItem="UGs-ZC-AJX" firstAttribute="top" secondItem="7Gg-iR-C0w" secondAttribute="top" constant="64" id="HOy-M4-gCc"/>
                                     <constraint firstItem="H5h-CX-J1v" firstAttribute="leading" secondItem="7Gg-iR-C0w" secondAttribute="leading" constant="16" id="Llo-f0-b4O"/>
                                     <constraint firstItem="H5h-CX-J1v" firstAttribute="top" secondItem="TR5-WP-Zxd" secondAttribute="bottom" constant="8" id="MWw-nT-ZXJ"/>
+                                    <constraint firstItem="7Gg-iR-C0w" firstAttribute="trailing" secondItem="dCS-Ct-WiW" secondAttribute="trailing" constant="108" id="OIx-WQ-CNs"/>
                                     <constraint firstItem="V8q-n4-UMZ" firstAttribute="leading" secondItem="7Gg-iR-C0w" secondAttribute="leading" constant="8" id="SXN-Ik-leY"/>
                                     <constraint firstItem="V8q-n4-UMZ" firstAttribute="top" secondItem="cHY-Zj-i7C" secondAttribute="bottom" constant="19" id="SuF-Y2-J8j"/>
                                     <constraint firstItem="7Gg-iR-C0w" firstAttribute="trailing" secondItem="V8q-n4-UMZ" secondAttribute="trailing" constant="108" id="pYS-0x-D2k"/>

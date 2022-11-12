@@ -2,10 +2,11 @@ import UIKit
 
 class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     //MARK: - variables
+    @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var TodayTimetableTableView: UITableView!
     @IBOutlet weak var DayCountWeekTodayLabel: UILabel!
     @IBOutlet weak var WeekdayLabel: UILabel!
-    var nowLesson = 0
+    var nowLesson = 100
     let numberOfWeek = Calendar.current.component(.weekday, from: Date())
     var allTimetable = timetable.take(day: Calendar.current.component(.weekday, from: Date()))
     
@@ -13,6 +14,7 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         
         super.viewDidLoad()
         
+        createRightButton()
         showPresentation()
         timetable.typeOfWeekFunc()
         playMusic()
@@ -33,7 +35,6 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         showPresentation()
         
         timetable.typeOfWeekFunc()
-        playMusic()
         if UserDefaults.standard.bool(forKey: "tutorial") == true {
         let data = UserDefaults.standard.object(forKey: "TimeTable") as! Data
         let decoded = try! JSONDecoder().decode(AllTimetableClass.self, from: data)
@@ -43,6 +44,16 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         WeekdayLabel.text = Calendar.current.WeekdayName(of: numberOfWeek)
         nextLesson()
         }
+    }
+    
+    //создание кнопки для navBar
+    private func createRightButton() {
+        let myButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(edit))
+        navBar.rightBarButtonItem = myButton
+    }
+    
+    @objc private func edit() {
+        TodayTimetableTableView.isEditing = !TodayTimetableTableView.isEditing
     }
     
     //нахождение следующей пары и форматирование лейбла с данными о сегодняшнем дне
@@ -160,6 +171,7 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
     }
 }
 
+//перевод числа в название недели
 public extension Calendar{
     func WeekdayName(of numberWeekDay: Int) -> String{
         switch numberWeekDay{
