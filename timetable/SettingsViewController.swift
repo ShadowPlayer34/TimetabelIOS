@@ -12,6 +12,7 @@ let music = ["Ambient", "Lofi", "Piano"]
 var player = AVAudioPlayer()
 class SettingsViewController: UIViewController {
   
+    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var settingsBarItem: UITabBarItem!
     @IBOutlet weak var volumeSlider: UISlider!
     @IBOutlet weak var stopMusicButton: UIButton!
@@ -23,7 +24,7 @@ class SettingsViewController: UIViewController {
         musicTableView.delegate = self
         musicTableView.dataSource = self
         customButton(button: stopMusicButton)
-        
+        customButton(button: editButton)
         createSlider()
 
     }

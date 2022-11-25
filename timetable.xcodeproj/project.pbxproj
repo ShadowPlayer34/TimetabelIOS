@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0BE333291FD0310089354C /* EditingTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BE332291FD0310089354C /* EditingTimetableViewController.swift */; };
 		3C622B3828E82C9700F05A9B /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C622B3728E82C9700F05A9B /* PresentationViewController.swift */; };
 		3C622B3A28E8458200F05A9B /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C622B3928E8458200F05A9B /* StartupViewController.swift */; };
 		3C622B3C28E8BC5C00F05A9B /* ManageTimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C622B3B28E8BC5C00F05A9B /* ManageTimetableTableViewCell.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0BE332291FD0310089354C /* EditingTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTimetableViewController.swift; sourceTree = "<group>"; };
 		3C622B3728E82C9700F05A9B /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
 		3C622B3928E8458200F05A9B /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		3C622B3B28E8BC5C00F05A9B /* ManageTimetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTimetableTableViewCell.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				3CB2A39628BD60CE006803E1 /* FirstViewController.swift */,
 				3C622B3B28E8BC5C00F05A9B /* ManageTimetableTableViewCell.swift */,
 				3CB4467828FDDF6C002DB8DF /* SettingsViewController.swift */,
+				3C0BE332291FD0310089354C /* EditingTimetableViewController.swift */,
 				3C6390CA28F834E600CFEB09 /* Timetable */,
 				3C6390C928F8349400CFEB09 /* Once Call Instruction */,
 				3C6390CB28F8350C00CFEB09 /* Helpers */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB2A39728BD60CE006803E1 /* FirstViewController.swift in Sources */,
+				3C0BE333291FD0310089354C /* EditingTimetableViewController.swift in Sources */,
 				3C6390E028F991CB00CFEB09 /* TimeTable.swift in Sources */,
 				3CB2A39328BD60CE006803E1 /* AppDelegate.swift in Sources */,
 				3C622B3A28E8458200F05A9B /* StartupViewController.swift in Sources */,

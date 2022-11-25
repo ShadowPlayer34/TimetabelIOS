@@ -2,7 +2,8 @@ import UIKit
 
 class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     //MARK: - variables
-    @IBOutlet weak var navBar: UINavigationItem!
+
+
     @IBOutlet weak var TodayTimetableTableView: UITableView!
     @IBOutlet weak var DayCountWeekTodayLabel: UILabel!
     @IBOutlet weak var WeekdayLabel: UILabel!
@@ -14,7 +15,8 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         
         super.viewDidLoad()
         
-        createRightButton()
+      
+        
         showPresentation()
         timetable.typeOfWeekFunc()
         playMusic()
@@ -46,16 +48,11 @@ class TodayLessonsViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
-    //создание кнопки для navBar
-    private func createRightButton() {
-        let myButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(edit))
-        navBar.rightBarButtonItem = myButton
-    }
+    //логика для кнопки edit
     
-    @objc private func edit() {
-        TodayTimetableTableView.isEditing = !TodayTimetableTableView.isEditing
+    @IBAction func editButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "allT", sender: nil)
     }
-    
     //нахождение следующей пары и форматирование лейбла с данными о сегодняшнем дне
     func nextLesson() {
         let date = Date()

@@ -321,7 +321,7 @@
         <!--Полное-->
         <scene sceneID="gFD-IP-NO0">
             <objects>
-                <collectionViewController id="ak3-bK-5jV" customClass="FullTimetableCollectionViewController" customModule="timetable" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="allT" id="ak3-bK-5jV" customClass="FullTimetableCollectionViewController" customModule="timetable" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4w7-uW-eBe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,6 +376,21 @@
             </objects>
             <point key="canvasLocation" x="2093" y="854"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Uyb-Q4-7fh">
+            <objects>
+                <viewController id="cRb-IL-etN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nih-vA-BcX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vzZ-Hb-1dh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IF1-gW-D0T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073" y="854"/>
+        </scene>
         <!--Сегодня-->
         <scene sceneID="a7d-42-Qqw">
             <objects>
@@ -409,6 +424,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="qQp-yS-P3P" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0Fd-W8-465" secondAttribute="top" id="Plq-h1-a9t"/>
+                                </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K1a-iP-r7l">
                                 <rect key="frame" x="5" y="116" width="310" height="403"/>
@@ -510,12 +528,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Сегодня" image="person.fill" catalog="system" selectedImage="person.fill" id="XJX-3q-qqb"/>
-                    <navigationItem key="navigationItem" id="B7R-Vo-Exe"/>
                     <connections>
                         <outlet property="DayCountWeekTodayLabel" destination="PTm-Ec-vx5" id="fYO-VY-u69"/>
                         <outlet property="TodayTimetableTableView" destination="K1a-iP-r7l" id="q9a-tG-6ax"/>
                         <outlet property="WeekdayLabel" destination="qQp-yS-P3P" id="xJJ-WU-tNv"/>
-                        <outlet property="navBar" destination="B7R-Vo-Exe" id="NxV-7e-JAi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5I-LX-jXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -617,7 +633,9 @@
                                     <constraint firstAttribute="height" constant="31" id="RSh-I3-GOX"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Добавить пару"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Добавить пару">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="addLessonButtonTapped:" destination="it5-kg-v2L" eventType="touchUpInside" id="zGz-1K-zpy"/>
                                 </connections>
@@ -629,7 +647,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="sbw-5L-7iK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Следующий день"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Следующий день">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="nextDayButtonTapped:" destination="it5-kg-v2L" eventType="touchUpInside" id="JrW-Ka-BUz"/>
                                 </connections>
@@ -658,7 +678,9 @@
                                     <constraint firstAttribute="height" constant="31" id="z2t-AO-Nsj"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Готово"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Готово">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="readyButtonTapped:" destination="it5-kg-v2L" eventType="touchUpInside" id="181-eX-oxd"/>
                                 </connections>
@@ -670,7 +692,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="vih-3b-thb"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Пропустить день"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Пропустить день">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="skipDayButtonTapped:" destination="it5-kg-v2L" eventType="touchUpInside" id="4et-HL-0Rj"/>
                                 </connections>
@@ -982,7 +1006,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title=" Редактировать"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -1019,6 +1043,7 @@
                     <tabBarItem key="tabBarItem" tag="1" title="Настройки" image="gear" catalog="system" selectedImage="gear" id="s0a-uN-8DV"/>
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
+                        <outlet property="editButton" destination="dCS-Ct-WiW" id="HTl-a7-chN"/>
                         <outlet property="musicTableView" destination="TR5-WP-Zxd" id="Orb-q6-mXG"/>
                         <outlet property="selectMusicLabel" destination="UGs-ZC-AJX" id="ef2-ud-fkK"/>
                         <outlet property="settingsBarItem" destination="s0a-uN-8DV" id="KZP-Lq-d5b"/>
