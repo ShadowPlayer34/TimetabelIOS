@@ -142,7 +142,7 @@
                             <constraint firstItem="pkH-3C-eJi" firstAttribute="top" secondItem="QqK-of-meX" secondAttribute="top" id="jFp-AA-Kaj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Завтра" image="command" catalog="system" selectedImage="command" id="FiB-hY-Iel"/>
+                    <tabBarItem key="tabBarItem" title="Завтра" image="arrowshape.turn.up.right.fill" catalog="system" selectedImage="arrowshape.turn.up.right.fill" id="FiB-hY-Iel"/>
                     <navigationItem key="navigationItem" id="F36-Qg-02m"/>
                     <connections>
                         <outlet property="DayCountWeekTomorrowLabel" destination="FKc-uL-7uI" id="irZ-7w-Ure"/>
@@ -527,7 +527,7 @@
                             <constraint firstItem="K1a-iP-r7l" firstAttribute="leading" secondItem="wX9-bj-ftq" secondAttribute="leading" constant="5" id="xXo-to-304"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Сегодня" image="person.fill" catalog="system" selectedImage="person.fill" id="XJX-3q-qqb"/>
+                    <tabBarItem key="tabBarItem" title="Сегодня" image="house.fill" catalog="system" selectedImage="house.fill" id="XJX-3q-qqb"/>
                     <connections>
                         <outlet property="DayCountWeekTodayLabel" destination="PTm-Ec-vx5" id="fYO-VY-u69"/>
                         <outlet property="TodayTimetableTableView" destination="K1a-iP-r7l" id="q9a-tG-6ax"/>
@@ -862,6 +862,40 @@
             </objects>
             <point key="canvasLocation" x="5238.75" y="70"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="n3u-aZ-js1">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="ndw-UI-dxu" customClass="SplashViewController" customModule="timetable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yT8-EV-5zw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDa-Q2-uUU">
+                                <rect key="frame" x="49" y="90" width="271" height="478"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="478" id="2DL-Tm-o1u"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="271" id="4mB-f5-bEq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oGw-zF-yvH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="FDa-Q2-uUU" secondAttribute="trailing" constant="-16" id="1r5-8Z-sPy"/>
+                            <constraint firstItem="FDa-Q2-uUU" firstAttribute="leading" secondItem="yT8-EV-5zw" secondAttribute="leadingMargin" constant="33" id="Wea-1w-1HG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="FDa-Q2-uUU" secondAttribute="bottom" id="b4n-qw-3y1"/>
+                            <constraint firstItem="FDa-Q2-uUU" firstAttribute="top" secondItem="yT8-EV-5zw" secondAttribute="topMargin" constant="90" id="rxv-r8-efK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="riveView" destination="FDa-Q2-uUU" id="bGV-lx-be4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khp-A6-lii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="-1215.8450704225352"/>
+        </scene>
         <!--Item-->
         <scene sceneID="IXH-3c-wWW">
             <objects>
@@ -1040,7 +1074,7 @@
                         <viewLayoutGuide key="safeArea" id="4yD-Mw-RHa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Настройки" image="gear" catalog="system" selectedImage="gear" id="s0a-uN-8DV"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Настройки" image="gearshape.fill" catalog="system" selectedImage="gearshape.fill" id="s0a-uN-8DV"/>
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
                         <outlet property="editButton" destination="dCS-Ct-WiW" id="HTl-a7-chN"/>
@@ -1079,12 +1113,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
-        <image name="command" catalog="system" width="128" height="115"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="grapper" width="262" height="32"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
