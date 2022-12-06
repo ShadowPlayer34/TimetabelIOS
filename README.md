@@ -12,7 +12,7 @@
   </ol>
   <p>This application will appear on your iPhone, but after about 7 days it will be blocked and you will have to reconnect the iPhone and run the project again</p>
 <h2>First Setup</h2>
-<p>When you first launch the application, there will be a menu for setting the schedule, unfortunately, quick import has not yet been implemented, so you have to write everything manually</p>
+<p>When you first launch the application, there will be a menu for setting the schedule, unfortunately, quick import has not yet been implemented, so you have to write everything manually:</p>
 <ol>
   <li>Run the application</li>
   <li>Select the number of days per week you study</li>
