@@ -5,11 +5,14 @@
 <p>Unfortunately, a full installation is not possible now, because this application is not posted in the AppStore. But if you really want to try it, then you should:</p>
   <ol>
   <li>Download this repository to your Mac, it won’t work with Windows</li>
-  <li>Then install Xcode ,using the AppStore</li>
+  <li>Install Xcode, using the AppStore</li>
   <li>Open the downloaded repository in Xcode</li>
-  <li>connect your IOS device to Mac and select it in the list of simulators</li>
-  <li>run the project</li>
+  <li>Connect your IOS device to Mac and select it in the list of simulators</li>
+  <li>Run the project</li>
   </ol>
   <p>This application will appear on your phone, but after about 7 days it will be blocked and you will have to reconnect the phone and run the project again</p>
+<h2>Pictures</h2>
+![Simulator Screen Shot - iPhone 13 - 2022-12-06 at 09 40 01](https://user-images.githubusercontent.com/61494312/205847058-f2e9f0dc-124d-4144-8123-74de69dadcf0.png)
+![Simulator Screen Shot - iPhone 13 - 2022-12-06 at 09 40 11](https://user-images.githubusercontent.com/61494312/205847122-73755df5-3744-4f3e-ba53-451730f3156b.png)
 <h2>Licensing</h2>
 <p>Please see the file called LICENSE.</p>
