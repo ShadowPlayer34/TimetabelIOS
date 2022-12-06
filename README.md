@@ -13,9 +13,13 @@
   <p>This application will appear on your phone, but after about 7 days it will be blocked and you will have to reconnect the phone and run the project again</p>
 <h2>Pictures</h2>
 <div>
+  <p>
   <img src = "https://user-images.githubusercontent.com/61494312/205857420-98458b98-c1cf-4aaa-8b42-a14253f3d564.png", width = 292.5px, heigth = 633px, margin-rigth = 20px>
+    &nbsp;
+    &nbsp;
   <img src = "https://user-images.githubusercontent.com/61494312/205847058-f2e9f0dc-124d-4144-8123-74de69dadcf0.png", width = 292.5px, heigth = 633px, margin-rigth = 20px>
   <img src = "https://user-images.githubusercontent.com/61494312/205847122-73755df5-3744-4f3e-ba53-451730f3156b.png", width = 292.5px, heigth = 633px>
+  </p>
 </div>
 <h2>Licensing</h2>
 <p>Please see the file called LICENSE.</p>
