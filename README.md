@@ -12,7 +12,7 @@
   </ol>
   <p>This application will appear on your phone, but after about 7 days it will be blocked and you will have to reconnect the phone and run the project again</p>
 <h2>Pictures</h2>
-<img src = "https://user-images.githubusercontent.com/61494312/205847058-f2e9f0dc-124d-4144-8123-74de69dadcf0.png", width = 390px, heigth = 844px>
-<img src = "https://user-images.githubusercontent.com/61494312/205847122-73755df5-3744-4f3e-ba53-451730f3156b.png", width = 390px, heigth = 844px>
+<img src = "https://user-images.githubusercontent.com/61494312/205847058-f2e9f0dc-124d-4144-8123-74de69dadcf0.png", width = 292.5px, heigth = 633px>
+<img src = "https://user-images.githubusercontent.com/61494312/205847122-73755df5-3744-4f3e-ba53-451730f3156b.png", width = 292.5px, heigth = 633px>
 <h2>Licensing</h2>
 <p>Please see the file called LICENSE.</p>
