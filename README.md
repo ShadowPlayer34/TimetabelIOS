@@ -10,7 +10,15 @@
   <li>Connect your IOS device to Mac and select it in the list of simulators</li>
   <li>Run the project</li>
   </ol>
-  <p>This application will appear on your phone, but after about 7 days it will be blocked and you will have to reconnect the phone and run the project again</p>
+  <p>This application will appear on your iPhone, but after about 7 days it will be blocked and you will have to reconnect the iPhone and run the project again</p>
+<h2>First Setup</h2>
+<p>When you first launch the application, there will be a menu for setting the schedule, unfortunately, quick import has not yet been implemented, so you have to write everything manually</p>
+<ol>
+  <li>Run the application</li>
+  <li>Select the number of days per week you study</li>
+  <li>Write the lesson's name, start and end time, lecture or not, and click next lesson, if there are more lesson on this day or next day to fill in the next day, if there are no lessons for this day, then click skip the day</li>
+  <li>Press done</li>
+</ol>
 <h2>Pictures</h2>
 <div>
   <p>
