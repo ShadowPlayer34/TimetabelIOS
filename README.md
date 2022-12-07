@@ -20,7 +20,7 @@
   <li>Press done</li>
 </ol>
 <h2>User Guide</h2>
-<p>After installation and configuration, you can already use the application.<br> When you enter the application, you immediately see the schedule for today, the circled lesson is the next lesson.<br> On the second tab, the schedule for the next day.<br> On the third tab, you can see the schedule for each day.<br> And on the fourth is the application settings, in this tab you can enable background music for the application</p>
+<p>After installation and configuration, you can already use the application.<br> When you enter the application, you immediately see the schedule for today, the circled lesson is the next lesson. Orange near the lesson means that this is a lecture, and blue is everything else<br> On the second tab, the schedule for the next day.<br> On the third tab, you can see the schedule for each day.<br> And on the fourth is the application settings, in this tab you can enable background music for the application</p>
 <h2>Pictures</h2>
 <div>
   <p>
